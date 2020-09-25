@@ -1,0 +1,14 @@
+
+
+.header{
+    height: 140px;
+    background: #AC3127;
+    font-family: "Luminari", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    padding: 45px;
+    color: #fafafa;
+    font-style: normal;
+    letter-spacing: 2px;
+}
