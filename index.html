@@ -10,21 +10,100 @@
 <title>Nordic Art Galleries Search Page</title>
 </head>
 <body>
-    <header> 
+    <header class="container-fluid"> 
         <div class="row no-gutters">
-            <div class="col header">
+            <div class="col siteheading">
                 The Nordic Art Galleria Search
             </div>
         </div>
         <div class="row">
-            <ul>menu items -- under construction</ul>
+            <div class="col nav-bar">
+                <ul class="list-inline" id="menu">
+                    <li class="list-inline-item list-home"> 
+                        <a href="#"> <i class="fa fa-home home-color" aria-hidden="true">&nbsp;</i><span>Home</span></a>
+                    </li>
+                    <li class="list-inline-item list-wishlist"> 
+                        <a href="#"> <i class="far fa-heart wishlist-color">&nbsp;</i><span>My Wishlist</span> </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
-<section></section>
+<section class="container-fluid">
+<div class="row no-gutters intro-container" id="site-intro" >
+    <div class="col-6 col-md-6 content">
+        <p>
+            THIS Website aims to help locate the Art 
+            Galleries of Any of the Nordic countries.
+        </p>
+       
+        <p>
+            You can filter by country name and find 
+            the art galleries using google maps.
+        </p>
+        
+        <p>
+            You can also make a travel Wishlist by 
+            selecting the places of your interest, 
+            which can be emailed to your desired 
+            email id
+        </p>
+    </div>
+    <div class="col-6 col-md-6 pic-container">
+        <div class="col-sm-2 pic-nav">
+            <i class="fas fa-caret-left"></i>
+        </div>
+        <div class="col-sm-7 pic-display">
+            <img width="325" height="250" src="assets/images/galleries/Denmark_NationalGallery.png" alt="National Gallery of Denmark" id="animate_pic">
+        </div>
+        <div class="col-sm-2 pic-nav">
+        <i class="fas fa-caret-right"></i>
+        </div>
+    </div>
+</div>
 
-<footer>
+</section>
 
+<footer class="container-fluid">
+    <div class="row siteFooter" >
+        <div class="col-sm-4 footer-text"> <!-- leftcontainer-->
+            <h5 class="footer-text-upper">About Us</h5>
+            <p > Nordic Galleria Search helps you find any of the Art Galleries in the seven Nordic Countries. 
+           </p>
+           <h5 id="contact-us" class="footer-text footer-text-normal">
+                <a href="mailto:contact@nordicgalleria.com" target="_blank">
+                <i class="fas fa-envelope-square footer-icon-size">&nbsp;</i>Contact Us</a>
+            </h5>
+        </div>
+        <div class="col-sm-4 footer-text">
+            <h5 class="copyright">Copyright @ Nordic Art Galleria Search</h5><!--copyright-->
+        </div>
+        <div class="col-sm-4 "> 
+            <ul class="list-inline social-links">
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fab fa-linkedin footer-icon-size footer-text"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fab fa-twitter footer-icon-size footer-text"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fab fa-instagram footer-icon-size footer-text"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="#">
+                        <i class="fab fa-facebook-square footer-icon-size footer-text"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

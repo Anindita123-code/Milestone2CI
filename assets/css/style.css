@@ -1,14 +1,153 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
-.header{
+body{
+    margin: 0;
+}
+header{
+    margin: 0;
+    margin-left: 15px;
+    width: 100%;
+}
+.siteheading{
     height: 140px;
     background: #AC3127;
     font-family: "Luminari", sans-serif;
     font-weight: 400;
     font-size: 30px;
     text-align: center;
-    padding: 45px;
+    padding-top: 45px;
     color: #fafafa;
     font-style: normal;
     letter-spacing: 2px;
+}
+.nav-bar{
+    padding-right: 20px;
+    text-align: right;
+    font-size: 20px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+.nav-bar a:hover{
+    text-decoration: underline;
+    color: #000000;
+}
+.wishlist-color{
+    color: red;
+}
+.home-color{
+    color:darkcyan;
+}
+li{
+    padding: 10px;
+}
+footer{
+    width: 100%;
+    margin: 0;
+}
+footer a:hover{
+    text-decoration: none;
+    color: #fafafafa;
+}
+.siteFooter{
+    height: 140px;
+    background: #AC3127;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;    
+}
+.footer-text{
+    font-size: 15px;
+    color: #000000; /*#bd8787;*/
+    
+}
+.footer-text-normal{
+    margin: 0px;
+    padding: 15px 0px;
+    text-emphasis: none;
+    text-align: left;
+    color: #000000;
+}
+.footer-text-upper{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px 8px 8px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.footer-icon-size{
+    font-size: 25px;
+}
+#contact-us a {
+    color: #000000;
+    background:transparent;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+#contact-us a:hover{
+    color: #fafafa;
+}
+.social-links {
+    padding: 38px;
+    text-align: center;
+}
+.social-links li a i{
+    padding: 8px 10px;
+    text-align: center;
+    color: #000000;
+    background:transparent;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+.social-links li a i:hover {
+    color: #FAFAFA;
+}
+.copyright{
+    padding-top: 100px;
+    text-align: center;
+}
+/*------------------------styles for section element---*/
+#site-intro{
+    padding: 20px;
+    padding-left: 80px;
+    margin: 5px;
+}
+
+.content{
+    font-family: "Crimson Text", sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 20px 35px;
+    background: #fcfaf0;
+    width: 45%;
+    height: 100%;
+    box-shadow: 0 0 10px rgb(177, 176, 176);
+}
+
+.pic-container{
+    border: 1px, solid;
+    width: 50%;
+    height: 100%;
+}
+
+.pic-nav{
+    font-size: 40px;
+    text-align: center;
+    padding: 110px 10px;
+    width: 20%;
+}
+
+.pic-display{
+    margin: 0, auto;
+    padding: 20px ;
+    text-align: center;
 }
