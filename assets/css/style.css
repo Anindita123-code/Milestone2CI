@@ -82,6 +82,9 @@ footer a:hover{
 .footer-icon-size{
     font-size: 25px;
 }
+#contact-us{
+    padding-top: 50px;
+}
 #contact-us a {
     color: #000000;
     background:transparent;
@@ -94,7 +97,7 @@ footer a:hover{
     color: #fafafa;
 }
 .social-links {
-    padding: 38px;
+    padding: 30px 38px;
     text-align: center;
 }
 .social-links li a i{
@@ -111,8 +114,8 @@ footer a:hover{
     color: #FAFAFA;
 }
 .copyright{
-    padding-top: 100px;
-    text-align: center;
+    padding-top: 25px;
+    text-align: left;
 }
 /*------------------------styles for section element---*/
 #site-intro{
@@ -148,6 +151,7 @@ footer a:hover{
 
 .pic-display{
     margin: 0, auto;
+    box-shadow: 0 0 30px rgb(177, 176, 176);
     padding: 20px ;
     text-align: center;
 }
