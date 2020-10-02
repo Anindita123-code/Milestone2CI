@@ -12,12 +12,12 @@
 <body>
     <header class="container-fluid"> 
         <div class="row no-gutters">
-            <div class="col siteheading">
+            <div class="col-md-12 siteheading">
                 The Nordic Art Galleria Search
             </div>
         </div>
-        <div class="row">
-            <div class="col nav-bar">
+        <div class="row no-gutters">
+            <div class="col-md-12  nav-bar">
                 <ul class="list-inline" id="menu">
                     <li class="list-inline-item list-home"> 
                         <a href="#"> <i class="fa fa-home home-color" aria-hidden="true">&nbsp;</i><span>Home</span></a>
@@ -30,9 +30,9 @@
         </div>
     </header>
 
-<section class="container-fluid">
-<div class="row no-gutters intro-container" id="site-intro" >
-    <div class="col-6 col-md-6 content">
+<section class="container">
+<div class="row no-gutters"><!-- id="site-intro"-->
+    <div class="col-sm-6 site-intro"><!-- content-->
         <p>
             THIS Website aims to help locate the Art 
             Galleries of Any of the Nordic countries.
@@ -50,43 +50,45 @@
             email id
         </p>
     </div>
-    <div class="col-6 col-md-6 pic-container">
-        <div class="col-sm-2 pic-nav">
-            <a href="#"><i class="fas fa-caret-left"></i></a>
-        </div>
-        <div class="col-sm-7 pic-display">
-            <img width="325" height="245" src="assets/images/galleries/Denmark_NationalGallery.png" alt="National Gallery of Denmark" id="animate_pic">
-        </div>
-        <div class="col-sm-2 pic-nav">
-            <a href="#"><i class="fas fa-caret-right"></i></a>
+    <div class="col-sm-6">
+        <div class="row no-gutters">
+            <div class="col-sm-12 pic-display" id="image-div"><!-- pic-display-->
+                <span id="previous-pic">
+                <a href="#"><i class="fas fa-caret-left"></i></a></span>
+                <img width="350" height="245" src="assets/images/galleries/Denmark_NationalGallery.png" alt="National Gallery of Denmark" id="animate_pic">
+                <span id="next-pic">
+                <a href="#"><i class="fas fa-caret-right"></i></a></span>
+            </div>
         </div>
     </div>
 </div>
-<div class="row gallery-search" >
-    <div class="col-md-8">
-        <input type="text" id="SearchText" value="Search by Gallery Name">
-
+<div class="row">
+    <div class="col-sm gallery-search">
+        <form>
+            <span class="display-search-icon" height="20" width="20"></span>
+            <input type="text" name="search" id="searchGallery" placeholder="Search Galleries by Name">
+        </form>
+        <br>
     </div>
 </div>
 
 </section>
 
-<footer class="container-fluid">
-    <div class="row siteFooter" >
-        <div class="col-sm-4 footer-text"> <!-- leftcontainer-->
-            <h5 class="footer-text-upper">About Us</h5>
-            <p > Nordic Galleria Search helps you find any of the Art Galleries in the seven Nordic Countries. 
-            </p>
-            <h5 class="copyright">Copyright @ Nordic Art Galleria Search</h5>
+<footer class="container-fluid"> 
+    <div class="row no-gutters siteFooter" >
+        <div class="col-md-4"> 
+            <p class="footer-text-upper">About Us</p>
+            <p class="footer-text-normal"> Nordic Galleria Search helps you find any of the Art Galleries in the seven Nordic Countries. 
+            </p>            
         </div>
-        <div class="col-sm-4 footer-text">
-            <h5 id="contact-us" class="footer-text footer-text-normal social-links">
+        
+        <div class="col-md-4"> 
+            <h5 id="contact-us" class="footer-text-normal social-links">
                 <a href="mailto:contact@nordicgalleria.com" target="_blank">
                 <i class="fas fa-envelope-square footer-icon-size">&nbsp;</i>Contact Us</a>
-            </h5>
-           
+            </h5>   
         </div>
-        <div class="col-sm-4 "> 
+        <div class="col-md-4 "> 
             <ul class="list-inline social-links">
                 <li class="list-inline-item">
                     <a target="_blank" href="#">
