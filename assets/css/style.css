@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 body{
     margin: 0;
     width: 100%;
@@ -27,7 +27,7 @@ header{
 
 
 .nav-bar{
-   /* padding: 10px;*/
+    padding: 10px;
     text-align: right;
     font-size: 20px;    
 }
@@ -325,6 +325,46 @@ button{
     padding:15px 44px;
 }
 /**************End of Styles for Wishlist Page *****************/
+
+/************** Styles for Error Page *******************/
+.home{
+    font-size: 40px;
+    color: #9A7206;
+}
+.nav-bar_error_page{
+    padding: 20px;
+    text-align: right;
+}
+.error-pic{
+    /* padding: 0, 30px; */
+    background-image: url('/assets/images/oops.png');
+    height: 300px;
+    width:310px;
+    background-position: center; /* Center the image */
+    /* margin: 0, auto; */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.error-text{
+    margin: 20px;
+    padding: 20px;
+    line-height: 30px;
+ 
+}
+
+.error-text h2{
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.error-text p{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    padding: 5px 35px;
+}
+/************** End of Styles **************************/
 /* Media query for heading */
 @media only screen 
   and (min-device-width: 320px) 
