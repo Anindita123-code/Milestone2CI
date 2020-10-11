@@ -39,6 +39,13 @@ header{
 .home-color{
     color:darkcyan;
 }
+#CountryThumbnailDiv{
+   display:block;
+}
+#divSelect{
+    display:none;
+    text-align: center;
+}
 /***** styles for the footer *********/
 /*.row {
     margin-right: -20px;
@@ -145,15 +152,11 @@ footer a:hover{
     margin: 20px;
     padding: 10px;
     text-align: center;
-}
-
-#image-div img{
-    /*width: 430px;
-    height:280px;*/
-    width: 77%;
+    width: 80%;
     height: 100%;
     box-shadow: 0 0 30px rgb(133, 131, 131);
 }
+
 
 #previous-pic{
     margin: 0 20px;
@@ -261,6 +264,85 @@ footer a:hover{
 }
 /******************* end tooltip *************************/
 
+
+/********************* Carousel Styles********************/
+/* alignment of Carousel*/
+.carousel-center
+{
+    text-align: center;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color:black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+    left: 0;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  /* background-color: rgba(0,0,0,0.4); */
+  left: 0;
+}
+
+/* Number text (1/7 etc) */
+.numbertext {
+  color: #000;
+  background-color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/****************** End Carousel Styles ******************/
 .wishlist{
     font-size: 20px;
     color: red;
@@ -402,6 +484,13 @@ button{
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
+    
+   #divSelect{
+       display:block;
+   }
+   #CountryThumbnailDiv{
+       display:none;
+   }
     .siteheading{
         height: 100px;
         background: #AC3127;
@@ -419,6 +508,13 @@ button{
         letter-spacing: 1px;
         line-height: 20px;
     }
+
+    #searchGallery {
+        width: 80%;
+    }
+    h5{
+        text-align: center;
+    }
     .siteFooter{
         background: #AC3127;
         font-family: "Roboto", sans-serif;
@@ -430,11 +526,14 @@ button{
         margin: 5px;
     }
     .pic-display{
-        margin: 0;
+        margin: 10px;
+        padding: 10px;
+        width: 95%
+       
     }
-    #image-div img{
-        width: 98%;
-        height: 88%;
+    .gallery_pic{
+        width: 95%;
+        text-align: center;  
     }
     .searchResult{
         width: 98%;

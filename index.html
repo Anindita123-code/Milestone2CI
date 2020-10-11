@@ -30,167 +30,270 @@
         </div>
     </header>
 
-<section class="container">
-<div class="row no-gutters"><!-- id="site-intro"-->
-    <div class="col-sm-6 site-intro"><!-- content-->
-        <p>
-            THIS Website aims to help locate the Art 
-            Galleries of Any of the Nordic countries.
-        </p>
-       
-        <p>
-            You can filter by country name and find 
-            the art galleries using google maps.
-        </p>
+    <section class="container">
+    <div class="row no-gutters">
+        <div class="col-sm-6 site-intro">
+            <p>
+                THIS Website aims to help locate the Art 
+                Galleries of Any of the Nordic countries.
+            </p>
         
-        <p>
-            You can also make a travel Wishlist by 
-            selecting the places of your interest and pressing the 
-             <i class="fas fa-heart wishlist">.</i><br>
-            This can be then be emailed to your desired mail-id using the Wishlist Page!
-        </p>
-    </div>
-    <div class="col-sm-6">
-        <div class="row no-gutters">
-            <div class="col-sm-12 pic-display" id="image-div"><!-- pic-display-->
-                <span id="previous-pic">
-                <a href="#"><i class="fas fa-caret-left"></i></a></span>
-                <img width="350" height="245" src="assets/images/galleries/Denmark_NationalGallery.png" alt="National Gallery of Denmark" id="animate_pic">
-                <span id="next-pic">
-                <a href="#"><i class="fas fa-caret-right"></i></a></span>
+            <p>
+                You can filter by country name and find 
+                the art galleries using google maps.
+            </p>
+            
+            <p>
+                You can also make a travel Wishlist by 
+                selecting the places of your interest and pressing the 
+                <i class="fas fa-heart wishlist">.</i><br>
+                This can be then be emailed to your desired mail-id using the Wishlist Page!
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="row no-gutters carousel-center">
+            <!-- Carousel markup -->
+                <!--div class="col-sm-12 pic-display"><class="gallery-slideshow-container"-->
+                    <!--<div class="col-sm-12 pic-display" id="image-div">
+                        <span id="previous-pic" class="prev">
+                            <a href="#"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img width="350" height="245" src="assets/images/galleries/Denmark_NationalGallery.png" alt="National Gallery of Denmark" id="animate_pic">
+                        <span id="next-pic">
+                            <a href="#" class="next"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                    </div>-->
+                    <div class="col-sm-12 pic-display picSlides">
+                        <div class="numbertext">1 / 7</div>
+                        <span class="prev">
+                            <a onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img class="gallery_pic" width="350" height="245" src="assets/images/galleries/Denmark_NationalGallery.png" >
+                        <span class="next">
+                            <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                        <div class="text">National Gallery of Denmark</div>
+                    </div>
+                   <div class="picSlides col-sm-12 pic-display">
+                        <div class="numbertext">2 / 7</div>
+                        <span class="prev">
+                            <a onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img class="gallery_pic" width="350" height="245" src="/assets/images/galleries/Art_Museum_Finland.jpg" >
+                        <span class="next">
+                            <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                        <div class="text">Art Museum of Finland</div>
+                    </div>
+                    <div class="picSlides col-sm-12 pic-display">
+                        <div class="numbertext">3 / 7</div>
+                        <span class="prev">
+                            <a onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img class="gallery_pic" width="350" height="245" src="assets/images/galleries/Aland_Maritime_museum.jpg">
+                        <span class="next">
+                            <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                        <div class="text">Maritime Museum of Aland</div>
+                    </div>
+
+                    <div class="picSlides col-sm-12 pic-display">
+                        <div class="numbertext">4 / 7</div>
+                        <span class="prev">
+                            <a onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img class="gallery_pic" width="350" height="245" src="assets/images/galleries/Art_Museum_Sweden.jpeg">
+                        <span class="next">
+                            <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                        <div class="text">Art Museum of Sweden</div>
+                    </div>
+
+                    <div class="picSlides col-sm-12 pic-display">
+                        <div class="numbertext">5 / 7</div>
+                        <span class="prev">
+                            <a onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img class="gallery_pic" width="350" height="245" src="assets/images/galleries/Faroe_Island_Art_Museum.jpg">
+                        <span class="next">
+                            <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                        <div class="text">Art Museum of Faroe Island</div>
+                    </div>
+
+                    <div class="picSlides col-sm-12 pic-display">
+                        <div class="numbertext">6 / 7</div>
+                        <span class="prev">
+                            <a onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img class="gallery_pic" width="350" height="245" src="assets/images/galleries/Museum_of_Modern_art_Norway.jpg">
+                        <span class="next">
+                            <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                        <div class="text">Museum of Modern art of Norway</div>
+                    </div>
+
+                    <div class="picSlides col-sm-12 pic-display">
+                        <div class="numbertext">7 / 7</div>
+                        <span class="prev">
+                            <a onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+                        </span>
+                        <img class="gallery_pic" width="350" height="245" src="assets/images/galleries/National_Gallery_of_Greenland.jpeg">
+                        <span class="next">
+                            <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                        </span>
+                        <div class="text">National Gallery of Greenland</div>
+                    </div>
+
+                <div class="col-sm-12">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                    <span class="dot" onclick="currentSlide(7)"></span> 
+                </div>
+          
+                </div>
+                <br>
+
+                
+                
+            <!--end carousel markup-->
             </div>
+        <!--/div-->
+    </div>
+
+    <div class="row">
+        <div class="col-sm gallery-search">
+            <span class="display-search-icon" height="20" width="20"></span>
+            <input type="text" name="search" id="searchGallery" placeholder="Search by Gallery Name">
+            <br>
         </div>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-sm gallery-search">
-        <!-- <form> -->
-            <span class="display-search-icon" height="20" width="20"></span>
-            <input type="text" name="search" id="searchGallery" placeholder="Search Galleries by Name">
-        <!-- </form> -->
-        <br>
-    </div>
-</div>
-<h5> Search Galleries by Country </h5>
-<div class="row no-gutters">
-    <div class="col-md-12 country-list-container">    
-        <ul class="list-inline ">
-            <li class="list-inline-item countryThumbnail">
-                <a target="_blank" href="#">
-                    <img src="assets/images/Aland_thumbnail.png" alt="Aland">
-                </a>
-                <span class="tooltiptext" style="left: 5">Aland</span>
-            </li>
-            <li class="list-inline-item countryThumbnail">
-                <!-- <div class="countryThumnail"> -->
-                    <a target="_blank" href="#">
-                        <img src="assets/images/denmark_thumbnail.jpg">
+    <h5> Search Galleries by Country </h5>
+    
+    <div class="row no-gutters">
+        <div class="col-md-12" id="divSelect">
+            <select name="countryDropdown" id="countryDropdown">
+                <option value="none">--- Select Nordic Country ---</option>
+                <option value="a-land">Aland</option>
+                <option value="denmark">Denmark</option>
+                <option value="faroe-island">Faroe Island</option>
+                <option value="finland">Finland</option>
+                <option value="green-land">Greenland</option>
+                <option value="norway">Norway</option>
+                <option value="sweden">Sweden</option>
+            </select><br><br>
+        </div>
+        <div class="col-md-12 country-list-container" id="CountryThumbnailDiv">    
+            <ul class="list-inline ">
+                <li class="list-inline-item countryThumbnail">
+                    <a href="#">
+                        <img src="assets/images/Aland_thumbnail.png" alt="Aland">
+                    </a>
+                    <span class="tooltiptext" style="left: 5">Aland</span>
+                </li>
+                <li class="list-inline-item countryThumbnail">
+                    <a href="#">
+                        <img src="assets/images/denmark_thumbnail.jpg" alt="Denmark">
                     </a>
                     <span class="tooltiptext">Denmark</span>
-                <!-- </div> -->
-            </li>
-            <li class="list-inline-item countryThumbnail">
-                <!-- <div class="countryThumnail"> -->
-                    <a target="_blank" href="#">
-                        <img src="assets/images/faroeIsland_thumbnail.jpg">
+                </li>
+                <li class="list-inline-item countryThumbnail">
+                    <a href="#">
+                        <img src="assets/images/faroeIsland_thumbnail.jpg" alt="Faroe Island">
                     </a>
                     <span class="tooltiptext">Faroe Island</span>
-                <!-- </div>             -->
-            </li>
-            <li class="list-inline-item countryThumbnail">
-                <!-- <div class="countryThumnail"> -->
-                    <a target="_blank" href="#">
-                        <img src="assets/images/finland_thumbnail.jpg">
+                </li>
+                <li class="list-inline-item countryThumbnail"> 
+                    <a href="#">
+                        <img src="assets/images/finland_thumbnail.jpg" alt="Finland">
                     </a>
-                    <span class="tooltiptext">Finland</span>
-                <!-- </div> -->
-            </li>
-            <li class="list-inline-item countryThumbnail">
-                <!-- <div class="countryThumnail"> -->
-                    <a target="_blank" href="#">
-                        <img src="assets/images/greenland_thumbnail.jpg">
+                    <span class="tooltiptext">Finland</span>      
+                </li>
+                <li class="list-inline-item countryThumbnail">
+                    <a href="#">
+                        <img src="assets/images/greenland_thumbnail.jpg" alt="Greenland">
                     </a>
                     <span class="tooltiptext">Greenland</span>
-                <!-- </div> -->
-            </li>
-            <li class="list-inline-item countryThumbnail">
-                <!-- <div class="countryThumnail"> -->
-                    <a target="_blank" href="#">
-                        <img src="assets/images/norway_thumbnail1.jpeg">
+                </li>
+                <li class="list-inline-item countryThumbnail">
+                    <a href="#">
+                        <img src="assets/images/norway_thumbnail1.jpeg" alt="Norway">
                     </a>
                     <span class="tooltiptext">Norway</span>
-                <!-- </div>         -->
-            </li>
-            <li class="list-inline-item countryThumbnail">
-                <!-- <div class="circleContainer"> -->
-                    <a target="_blank" href="#">
-                        <img src="assets/images/sweden_thumbnail.jpeg">
+                </li>
+                <li class="list-inline-item countryThumbnail">
+                    <a href="#">
+                        <img src="assets/images/sweden_thumbnail.jpeg" alt="Sweden">
                     </a>
                     <span class="tooltiptext">Sweden</span>
-                <!-- </div> -->
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="row no-gutters SearchResult">
-    <div class="col-md-4">
-        <div class="row">
-            <span class="col-md-8" id="MapLocations">
-            <!-- map location list-->Map location List
-            </span>
-            <span class="col-md-4">
-             <a href="#"><i class="fas fa-heart wishlist"></i></a>
-             </span>
-        </div>
-    </div>
-    <div class="col-md-8" id="GMapContainer">
-        Google Map Display area
-    </div>
-</div>
-</section>
-
-<footer class="container-fluid"> 
-    <div class="row no-gutters siteFooter" >
-        <div class="col-md-4"> 
-            <p class="footer-text-upper">About Us</p>
-            <p class="footer-text-normal"> Nordic Galleria Search helps you find any of the Art Galleries in the seven Nordic Countries. 
-            </p>            
-        </div>
-        
-        <div class="col-md-4"> 
-            <h5 id="contact-us" class="footer-text-normal social-links">
-                <a href="mailto:contact@nordicgalleria.com" target="_blank">
-                <i class="fas fa-envelope-square footer-icon-size">&nbsp;</i>Contact Us</a>
-            </h5>   
-        </div>
-        <div class="col-md-4 "> 
-            <ul class="list-inline social-links">
-                <li class="list-inline-item">
-                    <a target="_blank" href="#">
-                        <i class="fab fa-linkedin footer-icon-size footer-text"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a target="_blank" href="#">
-                        <i class="fab fa-twitter footer-icon-size footer-text"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a target="_blank" href="#">
-                        <i class="fab fa-instagram footer-icon-size footer-text"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a target="_blank" href="#">
-                        <i class="fab fa-facebook-square footer-icon-size footer-text"></i>
-                    </a>
                 </li>
             </ul>
         </div>
     </div>
-</footer>
 
+    <div class="row no-gutters SearchResult">
+        <div class="col-md-4">
+            <div class="row">
+                <span class="col-md-8" id="MapLocations">
+                Map location List
+                </span>
+                <span class="col-md-4">
+                <a href="#"><i class="fas fa-heart wishlist"></i></a>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8" id="GMapContainer">
+            Google Map Display area
+        </div>
+    </div>
+    </section>
+
+    <footer class="container-fluid"> 
+        <div class="row no-gutters siteFooter" >
+            <div class="col-md-4"> 
+                <p class="footer-text-upper">About Us</p>
+                <p class="footer-text-normal"> Nordic Galleria Search helps you find any of the Art Galleries in the seven Nordic Countries. 
+                </p>            
+            </div>
+            
+            <div class="col-md-4"> 
+                <h5 id="contact-us" class="footer-text-normal social-links">
+                    <a href="mailto:contact@nordicgalleria.com" target="_blank">
+                    <i class="fas fa-envelope-square footer-icon-size">&nbsp;</i>Contact Us</a>
+                </h5>   
+            </div>
+            <div class="col-md-4 "> 
+                <ul class="list-inline social-links">
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-linkedin footer-icon-size footer-text"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-twitter footer-icon-size footer-text"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-instagram footer-icon-size footer-text"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-facebook-square footer-icon-size footer-text"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="assets/scripts/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
