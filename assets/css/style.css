@@ -150,10 +150,11 @@ footer a:hover{
 
 .pic-display{
     margin: 20px;
-    padding: 10px;
-    text-align: center;
+    margin-left: 50px;
+    align-items: center;
     width: 80%;
     height: 100%;
+    box-align: center;
     box-shadow: 0 0 30px rgb(133, 131, 131);
 }
 
@@ -528,7 +529,7 @@ button{
     .pic-display{
         margin: 10px;
         padding: 10px;
-        width: 95%
+        width: 95%;
        
     }
     .gallery_pic{
