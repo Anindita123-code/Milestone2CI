@@ -122,7 +122,15 @@ footer a:hover{
     text-align: right;
 }*/
 /*------------------------styles for section element---*/
-
+#map{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.map-container{
+    height: 600px;
+    width: 770x;
+}
 .site-intro{
     padding:20px;
     margin: 20px 0px;
@@ -352,7 +360,7 @@ footer a:hover{
     margin: 0, auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 10px;
     border: 1px, solid, gray;
     box-shadow: 0 0 20px rgb(177, 176, 176);
 }
