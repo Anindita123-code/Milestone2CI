@@ -40,9 +40,9 @@ function showSlides(n) {
 
 //*************** Global Variables *************** */
 
-const ApiKey = "AIzaSyCeetcMkyfLKX-96r4V__MikIyrXS17Hjw";
-const norwayLat = 60.765172;
-const norwayLng = 8.095888;
+//const ApiKey = "AIzaSyCeetcMkyfLKX-96r4V__MikIyrXS17Hjw";
+const norwayLat = 59.878967;
+const norwayLng = 10.789917;
 const swedenLat = 57.522434;
 const swedenLng = 14.775575;
 const denmarkLat = 56.291470;
@@ -57,20 +57,25 @@ const alandLat = 60.2588775;
 const alandLng = 19.227217;
 
 //Global Variable for countrySearch
-var searchCountry = 'Denmark';
+var searchCountry = sessionStorage.getItem("searchCountry");
 
 let map;
 let service;
 let infowindow;
 let country;
 
+document.getElementById("selected_country").innerText = " : " + searchCountry;
+setCountry(searchCountry);
+
 function initMap() {
-    // console.log('Initmap ' + searchCountry)
+    //console.log('Initmap ' + searchCountry)
+   
     switch(searchCountry){
         case 'Denmark': 
             country = new google.maps.LatLng(denmarkLat, denmarkLng);
             break;
         case 'Norway':
+            //console.log("Norway...." + norwayLat + "..." + norwayLng);
             country = new google.maps.LatLng(norwayLat, norwayLng);
             break;
         case 'Sweden':
@@ -89,11 +94,11 @@ function initMap() {
             country = new google.maps.LatLng(alandLat, alandLng);
             break;
     }
-    // console.log(country);
+     console.log(country);
     infowindow = new google.maps.InfoWindow();
     map = new google.maps.Map(document.getElementById("map"), {
         center: country,
-        zoom: 12,
+        zoom: 15,
     });
     const request = {
         query: "Art Galleries of " + searchCountry,
@@ -122,42 +127,28 @@ function createMarker(place) {
 }
 
 // **************** End Google Map *****************
-// var htmlBody = document.querySelector('body');
-// htmlBody.addEventListener('onload', setDefaultMap('Denmark'));
-
-function setDefaultMap(countryName){
-    var country = document.getElementById("Denmark");
+ 
+ function setCountry(countryName){
+    
+    var country = document.getElementById(countryName);
+    
     var anchorElement = country.childNodes;
     for(var i=0; i<anchorElement.length; i++){
-        if(i==1){ // targeting the img tag in the anchor
+        if(i==1){ // targeting the img tag in the anchors
             anchorElement[1].style.borderStyle='solid'; 
             anchorElement[1].style.borderWidth='5px'; 
         }
     }
 }
 
+
+
 function searchByCountry(countryName){
-    searchCountry = countryName;
-    console.log(searchCountry)
+    sessionStorage.setItem("searchCountry", countryName);
 }
-// var thumbImgSweden = document.getElementById('Sweden');
-// thumbImgSweden.addEventListener('onclick', searchByCountry('Swedem'));
 
-// var thumbImgNorway = document.getElementById('Norway');
-// thumbImgNorway.addEventListener('onclick', searchByCountry('Norway'));
-
-// var thumbImgDenmark = document.getElementById('Denmark');
-// thumbImgDenmark.addEventListener('onclick', searchByCountry('Denmark'));
-
-// var thumbImgFinland = document.getElementById('Finland');
-// thumbImgFinland.addEventListener('onclick', searchByCountry('Finland'));
-
-// var thumbImgGreenland = document.getElementById('Greenland');
-// thumbImgGreenland.addEventListener('onclick', searchByCountry('Greenland'));
-
-// var thumbImgFaroe = document.getElementById('Faroe');
-// thumbImgFaroe.addEventListener('onclick', searchByCountry('Faroe'));
-
-// var thumbImgAland = document.getElementById('Aland');
-// thumbImgAland.addEventListener('onclick', searchByCountry('Aland'));
-
+function clearSession()
+{
+    sessionStorage.removeItem("searchCountry");
+    sessionStorage.clear;
+}
