@@ -30,13 +30,15 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    console.log(slides[slideIndex-1]);
+   // console.log(slides[slideIndex-1]);
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
 }
 //************** End Carousel Script */
 
 // Google Maps Coding
+
+//*************** Global Variables *************** */
 
 const ApiKey = "AIzaSyCeetcMkyfLKX-96r4V__MikIyrXS17Hjw";
 const norwayLat = 60.765172;
@@ -54,30 +56,58 @@ const faroeLng = -8.0752449;
 const alandLat = 60.2588775;
 const alandLng = 19.227217;
 
+//Global Variable for countrySearch
+var searchCountry = 'Denmark';
+
 let map;
 let service;
 let infowindow;
+let country;
 
 function initMap() {
-  const Denmark = new google.maps.LatLng(denmarkLat, denmarkLng);
-  infowindow = new google.maps.InfoWindow();
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: Denmark,
-    zoom: 15,
-  });
-  const request = {
-    query: "Art Galleries of Denmark",
-    fields: ["name", "geometry"],
-  };
-  service = new google.maps.places.PlacesService(map);
-  service.findPlaceFromQuery(request, (results, status) => {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      for (let i = 0; i < results.length; i++) {
-        createMarker(results[i]);
-      }
-      map.setCenter(results[0].geometry.location);
+    // console.log('Initmap ' + searchCountry)
+    switch(searchCountry){
+        case 'Denmark': 
+            country = new google.maps.LatLng(denmarkLat, denmarkLng);
+            break;
+        case 'Norway':
+            country = new google.maps.LatLng(norwayLat, norwayLng);
+            break;
+        case 'Sweden':
+            country = new google.maps.LatLng(swedenLat, swedenLng);
+            break;
+        case 'Greenland':
+            country = new google.maps.LatLng(greenlandLat, greenlandLng);
+            break;
+        case 'Finland':
+            country = new google.maps.LatLng(finlandLat, finlandLng);
+            break;
+        case 'Faroe':
+            country = new google.maps.LatLng(faroeLat, faroeLng);
+            break;
+        case 'Aland':
+            country = new google.maps.LatLng(alandLat, alandLng);
+            break;
     }
-  });
+    // console.log(country);
+    infowindow = new google.maps.InfoWindow();
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: country,
+        zoom: 12,
+    });
+    const request = {
+        query: "Art Galleries of " + searchCountry,
+        fields: ["name", "geometry"],
+    };
+    service = new google.maps.places.PlacesService(map);
+    service.findPlaceFromQuery(request, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (let i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+        }
+        map.setCenter(results[0].geometry.location);
+        }
+    });
 }
 
 function createMarker(place) {
@@ -90,3 +120,44 @@ function createMarker(place) {
     infowindow.open(map);
   });
 }
+
+// **************** End Google Map *****************
+// var htmlBody = document.querySelector('body');
+// htmlBody.addEventListener('onload', setDefaultMap('Denmark'));
+
+function setDefaultMap(countryName){
+    var country = document.getElementById("Denmark");
+    var anchorElement = country.childNodes;
+    for(var i=0; i<anchorElement.length; i++){
+        if(i==1){ // targeting the img tag in the anchor
+            anchorElement[1].style.borderStyle='solid'; 
+            anchorElement[1].style.borderWidth='5px'; 
+        }
+    }
+}
+
+function searchByCountry(countryName){
+    searchCountry = countryName;
+    console.log(searchCountry)
+}
+// var thumbImgSweden = document.getElementById('Sweden');
+// thumbImgSweden.addEventListener('onclick', searchByCountry('Swedem'));
+
+// var thumbImgNorway = document.getElementById('Norway');
+// thumbImgNorway.addEventListener('onclick', searchByCountry('Norway'));
+
+// var thumbImgDenmark = document.getElementById('Denmark');
+// thumbImgDenmark.addEventListener('onclick', searchByCountry('Denmark'));
+
+// var thumbImgFinland = document.getElementById('Finland');
+// thumbImgFinland.addEventListener('onclick', searchByCountry('Finland'));
+
+// var thumbImgGreenland = document.getElementById('Greenland');
+// thumbImgGreenland.addEventListener('onclick', searchByCountry('Greenland'));
+
+// var thumbImgFaroe = document.getElementById('Faroe');
+// thumbImgFaroe.addEventListener('onclick', searchByCountry('Faroe'));
+
+// var thumbImgAland = document.getElementById('Aland');
+// thumbImgAland.addEventListener('onclick', searchByCountry('Aland'));
+

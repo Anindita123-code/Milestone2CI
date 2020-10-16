@@ -155,13 +155,14 @@
         <!--/div-->
     </div>
 
-    <div class="row">
+    <!--<div class="row">
         <div class="col-sm gallery-search">
-            <span class="display-search-icon" height="20" width="20"></span>
-            <input type="text" name="search" id="searchGallery" placeholder="Search by Gallery Name">
+            <span height="20" width="20"></span>
+            <input type="text" name="searchGallery" id="searchGallery" placeholder="Search by Gallery Name">
             <br>
         </div>
-    </div>
+    </div-->
+    
     <h5> Search Galleries by Country </h5>
     
     <div class="row no-gutters">
@@ -180,43 +181,43 @@
         <div class="col-md-12 country-list-container" id="CountryThumbnailDiv">    
             <ul class="list-inline ">
                 <li class="list-inline-item countryThumbnail">
-                    <a href="#">
+                    <a href="" onclick="javascript:searchByCountry('Aland')">
                         <img src="assets/images/Aland_thumbnail.png" alt="Aland">
                     </a>
-                    <span class="tooltiptext" style="left: 5">Aland</span>
+                    <span class="tooltiptext" >Aland</span>
                 </li>
                 <li class="list-inline-item countryThumbnail">
-                    <a href="#">
+                    <a href="" onclick="javascript:searchByCountry('Denmark')">
                         <img src="assets/images/denmark_thumbnail.jpg" alt="Denmark">
                     </a>
                     <span class="tooltiptext">Denmark</span>
                 </li>
                 <li class="list-inline-item countryThumbnail">
-                    <a href="#">
+                    <a href="" id="Faroe">
                         <img src="assets/images/faroeIsland_thumbnail.jpg" alt="Faroe Island">
                     </a>
                     <span class="tooltiptext">Faroe Island</span>
                 </li>
                 <li class="list-inline-item countryThumbnail"> 
-                    <a href="#">
+                    <a href="" id="Finland">
                         <img src="assets/images/finland_thumbnail.jpg" alt="Finland">
                     </a>
                     <span class="tooltiptext">Finland</span>      
                 </li>
                 <li class="list-inline-item countryThumbnail">
-                    <a href="#">
+                    <a href="" id="Greenland">
                         <img src="assets/images/greenland_thumbnail.jpg" alt="Greenland">
                     </a>
                     <span class="tooltiptext">Greenland</span>
                 </li>
                 <li class="list-inline-item countryThumbnail">
-                    <a href="#">
+                    <a href="" id="Norway">
                         <img src="assets/images/norway_thumbnail1.jpeg" alt="Norway">
                     </a>
                     <span class="tooltiptext">Norway</span>
                 </li>
                 <li class="list-inline-item countryThumbnail">
-                    <a href="#">
+                    <a href="" id="Sweden">
                         <img src="assets/images/sweden_thumbnail.jpeg" alt="Sweden">
                     </a>
                     <span class="tooltiptext">Sweden</span>
@@ -232,7 +233,7 @@
                 Map location List
                 </span>
                 <span class="col-md-4">
-                <a href="#"><i class="fas fa-heart wishlist"></i></a>
+                <a href=""><i class="fas fa-heart wishlist"></i></a>
                 </span>
             </div>
             <div class="row">
