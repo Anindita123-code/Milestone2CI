@@ -228,23 +228,24 @@
     </div>
 
     <div class="row SearchResult">
-        <div class="col-md-4">
-            <div class="row">
-                <span class="col-md-8" id="mapLocations">
+        <div class="col-md-4 ">
+            <div class="row search-result" id="GallerySearchResults">
+                <span class="col-md-8">
                 Map location List
                 </span>
                 <span class="col-md-4">
-                <a href=""><i class="fas fa-heart wishlist"></i></a>
-                </span>
+                <button id="myWish" onclick="addtoWishList()" >add to wishlist</button>
+                <!--<a href="" onclick="addtoWishList()"><i class="fas fa-heart wishlist"></i></a>
+                <-->/span>
             </div>
-            <div class="row">
+            <!--<div class="row">
                 <span class="col-md-8">
                 Map location List
                 </span>
                 <span class="col-md-4">
                 <a href="#"><i class="fas fa-heart wishlist"></i></a>
                 </span>
-            </div>
+            </div>-->
         </div>
         <div class="col-md-8 map-container">
             <div id="map"><!--Google Map Display Area --></div>
@@ -299,8 +300,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeetcMkyfLKX-96r4V__MikIyrXS17Hjw&libraries=places&callback=initMap">
-</script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeetcMkyfLKX-96r4V__MikIyrXS17Hjw&libraries=places&callback=initMap"></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
 </body>
 </html>

@@ -540,7 +540,8 @@ button{
         width: 95%;
         text-align: center;  
     }
-    .searchResult{
+    .search-result{
+        padding: 20px;
         width: 98%;
         height: 98%;   
     }
