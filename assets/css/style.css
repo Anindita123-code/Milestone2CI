@@ -483,6 +483,15 @@ button{
     font-size: 20px;
     padding: 5px 35px;
 }
+
+#myWish{
+    border: none;
+    font-size: 20px;
+}
+#myWish:active{
+    border:none;
+    text-decoration: none;
+}
 /************** End of Styles **************************/
 /* Media query for heading */
 @media only screen 
