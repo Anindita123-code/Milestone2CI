@@ -47,8 +47,8 @@ const swedenLat = 57.522434;
 const swedenLng = 14.775575;
 const denmarkLat = 56.291470;
 const denmarkLng = 10.591553;
-const greenlandLat = 66.905645;
-const greenlandLng = -34.924484;
+const greenlandLat = 68.702821;
+const greenlandLng = -40.658112;
 const finlandLat = 63.000747;
 const finlandLng = 26.992372;
 const faroeLat = 61.848012;
@@ -98,7 +98,7 @@ function initMap() {
     }
    
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
+        zoom: 5,
         center: country
     });    
 
@@ -108,26 +108,48 @@ function initMap() {
    
     var request = {
         location: country,
-        radius: '1000',
+        radius: '5000',
     
-        query: searchCountry + " Art galleries + museum",
-        fields: ["place_id", "name", "geometry", "formatted_address", "business_status", "photos"],
+        query: searchCountry + ' art gallery + museum',
+        fields: ["place_id", "name", "geometry", "formatted_address", "business_status", "icon"],
     };
     
     var service = new google.maps.places.PlacesService(map);
      
-    service.nearbySearch(request, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            console.log("nearby search" + results.length);
-            
-            for (let i = 0; i < results.length; i++) {
-               // console.log(results[i]);
-                //fetchSearchResults(results[i]);
+    service.textSearch(request, callback);
+}
+
+function callback(results, status) {
+    console.log(status);
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+                var place = results[i];
                 createMarker(results[i],i);
+                if(i>=0){ // create multiple rows
+                    var newRow = document.createElement("div");
+                    newRow.classList.add = "row";
+                    newRow.classList.add = "search-result";
+                    newRow.id.add = "Row";
+                    fetchSearchResults(place);
+                    //console.log(fetchSearchResults(place));    
+                    document.getElementById("List_Gallery").appendChild(newRow);
+                }
+                //fetchSearchResults(place);
             }
-            //map.setCenter(results[0].geometry.location);
         }
-    });
+}
+function fetchSearchResults(place){
+    //console.log(place);
+
+     $("#Row").html(`
+        <span class="col-md-8">
+            &nbsp; Name : ${place.name} &nbsp; <br> &nbsp; Address:${place.formatted_address} <br> &nbsp; Business Status: ${place.business_status}
+           <br> &nbsp; <img src="${place.icon}" alt="thumbnail image of gallery">
+        </span>
+        <span class="col-md-4">
+            <button type="button" name="myWish" id="myWish" onclick="addtoWishList()" ><i class="fas fa-heart wishlist"></i></button>  
+        </span>
+    `);
 }
 
 function createMarker(place,i) {
@@ -140,22 +162,11 @@ function createMarker(place,i) {
     });
     
     google.maps.event.addListener(marker, "click", () => {
-        infowindow.setContent(place.name);
-        infowindow.open(map);
+        //infowindow.setContent(place.name);
+        //infowindow.open(map);
   });
 }
-
-    /*function callback(results, status) {
-         if (status == google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                fetchSearchResults(results[i]);
-                // createMarker(results[i]);
-            }
-        }
-    }*/
-    
-
-
+ 
 // **************** End Google Map *****************
  
  function setCountry(countryName){
@@ -187,21 +198,4 @@ function addtoWishList(){
     alert("this is under construction now ");
 }
 
-function fetchSearchResults(place){
-    
-    //$.when(
-       // $.getJSON(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=YOUR_API_KEY`);}
-    // .then{}
-    
-    $("#GallerySearchResults").html(`<div class = "row">
-        <span class="col-md-8">
-            Name : ${place.name} &nbsp; | &nbsp; Address:${place.formatted_address} <br> Business Status: ${place.business_status}
-           <br> <img src="" alt="thumbnail image of gallery">
-        </span>
-        <span class="col-md-4">
-            <button type="button" name="myWish" id="myWish" onclick="addtoWishList()" ><i class="fas fa-heart wishlist"></i></button>
-           
-        </span></div>
-    `);
-}
 
