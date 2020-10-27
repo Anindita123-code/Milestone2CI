@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <title>Nordic Art Galleries Search Page</title>
 </head>
-<body>
+<body onload="javascript:fetchfromWishList()">
     <header class="container-fluid"> 
         <div class="row no-gutters">
             <div class="col-md-12 siteheading">
@@ -31,36 +31,21 @@
     </header>
     <section class="container">
     <br>
-    <form>
-        <div class="row no-gutters row-position">
-            <div class="col-xs-2 icon-position"><a href="#"><i class="far fa-trash-alt"></i></a></div>
-            <div class="col-xs-2 icon-position"><input type="checkbox" checked></div>
-            <div class="col-xs-6 text-position">Sweden - The Swedish Art Gallery</div>
-        </div>
-        <div class="row no-gutters row-position">
-            <div class="col-xs-2 icon-position"><a href="#"><i class="far fa-trash-alt"></i></a></div>
-            <div class="col-xs-2 icon-position"><input type="checkbox" checked></div>
-            <div class="col-xs-6 text-position">Denmark - Martin Asbæk Gallery</div>
-        </div>
-        <div class="row no-gutters row-position">
-            <div class="col-xs-2 icon-position"><a href="#"><i class="far fa-trash-alt"></i></a></div>
-            <div class="col-xs-2 icon-position"><input type="checkbox" checked></div>
-            <div class="col-xs-6 text-position">Sweden - The Swedish Art Gallery</div>
-        </div>
-        <div class="row no-gutters row-position">
-            <div class="col-xs-2 icon-position"><a href="#"><i class="far fa-trash-alt"></i></a></div>
-            <div class="col-xs-2 icon-position"><input type="checkbox" checked></div>
-            <div class="col-xs-6 text-position">Denmark - Martin Asbæk Gallery</div>
-        </div>
-        <br>
+    <div id="WishlistDisplay">   
+        <!-- <div class="row no-gutters row-position"> -->
+
+            
+        <!-- </div> -->
+    </div>
+    <div>
         <div class="row" no-gutters>
             <div class="col-xs-12 button-container">
                 <button id="btnWishlist" name="btnWishlist">Generate Wishlist in .pdf</button>     
                 <a href="Error.html" target="_blank">Preview</a>
             </div>
         </div>
+    </div>
         <br>
-    </form>
 
             <!--<div class="col-md-8 row-position">
                 <span class="icon-position"><a href="#"><i class="far fa-trash-alt"></i></a></span>
@@ -123,7 +108,7 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="assets/scripts/script.js"></script>
+<script type="text/javascript" src="assets/scripts/wishlist_scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

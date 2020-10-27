@@ -167,13 +167,17 @@ function createMarker(place,i) {
         label: labels[i % labels.length]
     });
     
-    google.maps.event.addListener(marker, "click", () => {
+    // google.maps.event.addListener(marker, "click", () => {
         //infowindow.setContent(place.name);
         //infowindow.open(map);
-  });
+//   });
 }
+
+// **************** End Google Map **********************
+
+// **************** Scripts related to Wishlist *********
 function addtoWishList(country, name, address, status){
-    alert(JSON.parse(localStorage.getItem("WishList")));
+    //alert(JSON.parse(localStorage.getItem("WishList")));
     var myWishlist = [];
    
         if(JSON.parse(localStorage.getItem("WishList")) != null){
@@ -186,15 +190,18 @@ function addtoWishList(country, name, address, status){
             myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
         }
         localStorage.setItem ("WishList", JSON.stringify(myWishlist));
-        //console.log(myWishlist);
-        console.log(localStorage.getItem("WishList"));     
-    
+        console.log(myWishlist);
+              
 } 
 
 function clearWishList(){
     localStorage.clear();
+    alert("wishlist is cleared now!");
 }
-// **************** End Google Map *****************
+
+
+
+
 
 
  function setCountry(countryName){
