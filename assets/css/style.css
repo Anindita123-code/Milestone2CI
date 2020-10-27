@@ -352,6 +352,9 @@ footer a:hover{
     font-size: 20px;
     color: red;
 }
+.wishlist:checked{
+    color: darkmagenta;
+}
 .SearchResult{
     margin: 0, auto;
     margin-top: 10px;
@@ -359,6 +362,14 @@ footer a:hover{
     padding: 10px;
     border: 1px, solid, gray;
     box-shadow: 0 0 20px rgb(177, 176, 176);
+}
+.display{ 
+    border: 1px black solid;
+    height: 600px; 
+    overflow: auto;   
+}
+.clear_Wishlist{
+    text-align: center;
 }
 /*************** Styles for Wishlist Page *****************/
 .row-position{ 
@@ -550,8 +561,11 @@ button{
         text-align: center;  
     }
     .search-result{
+        border: 1px black solid;
         padding: 20px;
         width: 98%;
-        height: 98%;   
+        height: 98%;
+        /* height: 180px; */
+        overflow: auto;   
     }
 }

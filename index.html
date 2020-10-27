@@ -155,17 +155,12 @@
         <!--/div-->
     </div>
 
-    <!--<div class="row">
-        <div class="col-sm gallery-search">
-            <span height="20" width="20"></span>
-            <input type="text" name="searchGallery" id="searchGallery" placeholder="Search by Gallery Name">
-            <br>
-        </div>
-    </div-->
     
     <h5> Search Galleries by Country 
         <span id="selected_country"></span>
+        <button name="clearWishlist" id="clearWishList" class="clear_Wishlist" onclick="clearWishList()"> Clear Wishlist </button>
     </h5>
+   
     <div class="row no-gutters">
         <div class="col-md-12" id="divSelect">
             <select name="countryDropdown" id="countryDropdown">
@@ -228,31 +223,19 @@
     </div>
 
     <div class="row SearchResult">
-        <div class="col-md-4 " id="List_Gallery">
+        
+        <div class="col-md-4 display" id="List_Gallery">
             <div class="row search-result">
-                <span class="col-md-8">
-                Map location List
-                </span>
-                <span class="col-md-4">
-                <button type="button" id="myWish" onclick="addtoWishList()" ><i class="fas fa-heart wishlist"></i></button>
-                <!--<a href="" onclick="addtoWishList()"><i class="fas fa-heart wishlist"></i></a>
-                <--></span>
+              <!-- dynamic Data -->
             </div>
-            <!--<div class="row">
-                <span class="col-md-8">
-                Map location List
-                </span>
-                <span class="col-md-4">
-                <a href="#"><i class="fas fa-heart wishlist"></i></a>
-                </span>
-            </div>-->
+                    
         </div>
+        
         <div class="col-md-8 map-container">
             <div id="map"><!--Google Map Display Area --></div>
-            
         </div>
     </div>
-   
+    
     </section>
 
     <footer class="container-fluid"> 

@@ -1,4 +1,9 @@
 
+//******************************
+//******Global Variables
+
+
+
 //alert("scripts.js called");
 // **************** Carousel Script *********
 var slideIndex = 1;
@@ -36,8 +41,8 @@ function showSlides(n) {
 }
 //************** End Carousel Script */
 
+//************************************************ */
 // Google Maps Coding
-
 //*************** Global Variables *************** */
 
 //const ApiKey = "AIzaSyCeetcMkyfLKX-96r4V__MikIyrXS17Hjw";
@@ -61,8 +66,12 @@ var searchCountry = sessionStorage.getItem("searchCountry");
 var map;
 var infowindow;
 
+//Global Variable for Add to Wishlist
+//var myWishlist = [];
+
 if (searchCountry === null || searchCountry === "null"){
-    document.getElementById("selected_country").innerText = " : -- No Selection Made --";
+    document.getElementById("selected_country").innerText = "None";
+    //setCountry("Aland");
 }
 else{
     document.getElementById("selected_country").innerText = " : " + searchCountry;
@@ -72,7 +81,7 @@ else{
 function initMap() {
     infowindow = new google.maps.InfoWindow();
     switch(searchCountry){
-        case 'Aland':
+        case 'Aland'://Åland
             var country = new google.maps.LatLng(alandLat, alandLng);
             break;
         case 'Denmark': 
@@ -111,12 +120,13 @@ function initMap() {
         radius: '5000',
     
         query: searchCountry + ' art gallery + museum',
-        fields: ["place_id", "name", "geometry", "formatted_address", "business_status", "icon"],
+        fields: ["place_id", "name", "geometry", "formatted_address", "business_status", "photos"],
     };
     
     var service = new google.maps.places.PlacesService(map);
-     
-    service.textSearch(request, callback);
+    if(searchCountry != null || searchCountry != "null"){ 
+        service.textSearch(request, callback);
+    }
 }
 
 function callback(results, status) {
@@ -129,34 +139,30 @@ function callback(results, status) {
                     var newRow = document.createElement("div");
                     newRow.classList.add = "row";
                     newRow.classList.add = "search-result";
-                    newRow.id.add = "Row";
-                    fetchSearchResults(place);
-                    //console.log(fetchSearchResults(place));    
+                    
+                    newRow.innerHTML = fetchSearchResults(place);
+                
                     document.getElementById("List_Gallery").appendChild(newRow);
                 }
-                //fetchSearchResults(place);
             }
         }
 }
 function fetchSearchResults(place){
-    //console.log(place);
-
-     $("#Row").html(`
-        <span class="col-md-8">
-            &nbsp; Name : ${place.name} &nbsp; <br> &nbsp; Address:${place.formatted_address} <br> &nbsp; Business Status: ${place.business_status}
-           <br> &nbsp; <img src="${place.icon}" alt="thumbnail image of gallery">
-        </span>
-        <span class="col-md-4">
-            <button type="button" name="myWish" id="myWish" onclick="addtoWishList()" ><i class="fas fa-heart wishlist"></i></button>  
-        </span>
-    `);
+    var htmlString = '<span class="col-md-8"><b>Name : '+place.name+ 
+                '</b><br>'+place.formatted_address+
+                '<br>'+place.business_status+
+                '<br><br></span><span class="col-md-4"><button type="button" name="myWish" id="myWish" ';
+    //console.log(searchCountry);
+    var onclick_querystring = `onclick="addtoWishList('${searchCountry}','${place.name}', '${place.formatted_address}','${place.business_status}')" ><i class="fas fa-heart wishlist"></i></button></span>`;
+    //console.log(onclick_querystring);
+    return htmlString + onclick_querystring;
 }
 
 function createMarker(place,i) {
 
     var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
    // console.log(place); 
-    const marker = new google.maps.Marker({map,
+    const marker = new google.maps.Marker({map, //photos[0].getUrl({maxWidth: 35, maxHeight: 35})
         position: place.geometry.location,
         label: labels[i % labels.length]
     });
@@ -166,9 +172,31 @@ function createMarker(place,i) {
         //infowindow.open(map);
   });
 }
- 
+function addtoWishList(country, name, address, status){
+    alert(JSON.parse(localStorage.getItem("WishList")));
+    var myWishlist = [];
+   
+        if(JSON.parse(localStorage.getItem("WishList")) != null){
+            //console.log(">0");
+            myWishlist = JSON.parse(localStorage.getItem("WishList"));
+            console.log(myWishlist);
+            myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
+        }else{
+            //console.log("zero records");
+            myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
+        }
+        localStorage.setItem ("WishList", JSON.stringify(myWishlist));
+        //console.log(myWishlist);
+        console.log(localStorage.getItem("WishList"));     
+    
+} 
+
+function clearWishList(){
+    localStorage.clear();
+}
 // **************** End Google Map *****************
- 
+
+
  function setCountry(countryName){
      // This function highlights the country thumbnail
     
@@ -183,8 +211,6 @@ function createMarker(place,i) {
     }
 }
 
-
-
 function searchByCountry(countryName){
     sessionStorage.setItem("searchCountry", countryName);
 }
@@ -194,8 +220,6 @@ function clearSession()
     sessionStorage.removeItem("searchCountry");
     sessionStorage.clear;
 }
-function addtoWishList(){
-    alert("this is under construction now ");
-}
+
 
 
