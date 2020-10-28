@@ -7,7 +7,29 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+        emailjs.init("user_9tv1BSdrIPXy39aw6nHuB");
+        
+        var templateParams = {
+            name: 'Anindita',
+            notes: 'Check this out!'
+        };
+        
+        emailjs.send('gallerySearch', 'wishlist', templateParams)
+            .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+            console.log('FAILED...', error);
+            });
+   })();
+</script>
+
 <title>Nordic Art Galleries Search Page</title>
+
 </head>
 <body onload="javascript:fetchfromWishList()">
     <header class="container-fluid"> 
