@@ -10,23 +10,6 @@
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 </script>
-<script type="text/javascript">
-   (function(){
-        emailjs.init("user_9tv1BSdrIPXy39aw6nHuB");
-        
-        var templateParams = {
-            name: 'Anindita',
-            notes: 'Check this out!'
-        };
-        
-        emailjs.send('gallerySearch', 'wishlist', templateParams)
-            .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-            console.log('FAILED...', error);
-            });
-   })();
-</script>
 
 <title>Nordic Art Galleries Search Page</title>
 
@@ -57,33 +40,13 @@
         <!-- Dynamic results for wishlist carried forward from index page -->
     </div>
     <br>
-    <!-- <div>
-        <div class="row" no-gutters>
-            <div class="col-xs-12 button-container">
-                <button id="btnWishlist" name="btnWishlist">Generate Wishlist in .pdf</button>     
-                <a href="Error.html" target="_blank">Preview</a>
-            </div>
-        </div>
-    </div> -->
-        <br>
-
-            <!--<div class="col-md-8 row-position">
-                <span class="icon-position"><a href="#"><i class="far fa-trash-alt"></i></a></span>
-                <span class="icon-position checkstyle"><input type="checkbox" checked></span>
-                <span class="text-position">Denmark - Martin Asbæk Gallery</span>
-            </div>
-            <div class="col-md-8 row-position">
-                <span class="icon-position"><a href="#"><i class="far fa-trash-alt"></i></a></span>
-                <span class="icon-position checkstyle"><a href="#"><input type="checkbox" checked></a></span>
-                <span class="text-position">Sweden - The Swedish Art Gallery</span>
-            </div>-->
     <div class="row">
         <div class="col-xs-12 send-mail-section">
             <span class="send-email">
                 <!-- <i class="fas fa-envelope-square"></i> -->
                 <i class="far fa-envelope"></i> 
                 <input type="email" id="email" name="email" placeholder="youremail">
-                <button id="btnSendEmal" name="btnSendEmail"> Send Your Wishlist </button>
+                <button id="btnSendEmal" name="btnSendEmail" onclick="sendMail()"> Send Your Wishlist </button>
             </span>
         </div>
     </div>
