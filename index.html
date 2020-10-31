@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <title>Nordic Art Galleries Search Page</title>
 </head>
-<body>
+<body><!--Åland-->
     <header class="container-fluid"> 
         <div class="row no-gutters">
             <div class="col-md-12 siteheading">
@@ -20,10 +20,19 @@
             <div class="col-md-12  nav-bar">
                 <ul class="list-inline" id="menu">
                     <li class="list-inline-item list-home"> 
-                        <a href="index.html" style="text-decoration:underline"> <i class="fa fa-home home-color" aria-hidden="true">&nbsp;</i><span>Home</span></a>
+                        <a href="index.html" style="text-decoration:underline"> <i class="fa fa-home home-color" aria-hidden="true">&nbsp;</i><span class="Menu">Home</span></a>
                     </li>
                     <li class="list-inline-item list-wishlist"> 
-                        <a href="wishlist.html"> <i class="far fa-heart wishlist-color">&nbsp;</i><span>My Wishlist</span> </a>
+                
+                    <div class="dropdown show">
+                        <a href="#" class="btn btn-secondary dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-heart wishlist-color">&nbsp;</i><span class="Menu" >Wishlist</span> </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            <a class="dropdown-item wishlist_item" href="wishlist.html">My Wishlist Page</a><br>
+                            <a class="dropdown-item wishlist_item clear_Wishlist" href="#" onclick="clearWishList()">Clear Wishlist</a>
+                        </div>
+                    </div>
+                    
+                    <!-- <a href="wishlist.html"> <i class="far fa-heart wishlist-color">&nbsp;</i><span>My Wishlist</span> </a> -->
                     </li>
                 </ul>
             </div>
@@ -34,8 +43,8 @@
     <div class="row no-gutters">
         <div class="col-sm-6 site-intro">
             <p>
-                THIS Website aims to help locate the Art 
-                Galleries of Any of the Nordic countries.
+                THIS Website aims to locate the Art 
+                Galleries of the selected Nordic countries.
             </p>
         
             <p>
@@ -47,7 +56,7 @@
                 You can also make a travel Wishlist by 
                 selecting the places of your interest and pressing the 
                 <i class="fas fa-heart wishlist">.</i><br>
-                This can be then be emailed to your desired mail-id using the Wishlist Page!
+                This can be then be emailed to your desired mail-id through the Wishlist Page!
             </p>
         </div>
         <div class="col-sm-6  carousel-center">
@@ -84,7 +93,7 @@
                         <span class="next">
                             <a onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
                         </span>
-                        <div class="text">Maritime Museum of Aland</div>
+                        <div class="text">Maritime Museum of Åland</div>
                     </div>
 
                     <div class="picSlides col-sm-12 pic-display">
@@ -155,24 +164,24 @@
         <!--/div-->
     </div>
 
-    
-    <h5> Search Galleries by Country 
-        <span id="selected_country"></span>
-        <button name="clearWishlist" id="clearWishList" class="clear_Wishlist" onclick="clearWishList()"> Clear Wishlist </button>
+    <h5> Your Selection of Country from the list below  
+        <span id="selected_country"><!--Dynamic Data--></span>
     </h5>
    
     <div class="row no-gutters">
         <div class="col-md-12" id="divSelect">
             <select name="countryDropdown" id="countryDropdown">
-                <option value="none">--- Select Nordic Country ---</option>
-                <option value="a-land">Aland</option>
-                <option value="denmark">Denmark</option>
-                <option value="faroe-island">Faroe Island</option>
-                <option value="finland">Finland</option>
-                <option value="green-land">Greenland</option>
-                <option value="norway">Norway</option>
-                <option value="sweden">Sweden</option>
-            </select><br><br>
+                <option value="none">--- Select ---</option>
+                <option value="Aland">Åland</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Faroe">Faroe Island</option>
+                <option value="Finland">Finland</option>
+                <option value="Greenland">Greenland</option>
+                <option value="Norway">Norway</option>
+                <option value="Wweden">Sweden</option>
+            </select>
+            <button name="search" id="search-by-country" class="" onclick="searchByCountry(document.getElementById('countryDropdown').value)"> Search </button>
+            <br><br>
         </div>
         <div class="col-md-12 country-list-container" id="CountryThumbnailDiv">    
             <ul class="list-inline ">
@@ -180,7 +189,7 @@
                     <a href="" id="Aland" onclick="searchByCountry('Aland')">
                         <img src="assets/images/Aland_thumbnail.png" alt="Aland">
                     </a>
-                    <span class="tooltiptext">Aland</span>
+                    <span class="tooltiptext">Åland</span>
                 </li>
                 <li class="list-inline-item countryThumbnail">
                     <a href="" id="Denmark" onclick="searchByCountry('Denmark')">
@@ -223,11 +232,13 @@
     </div>
 
     <div class="row SearchResult">
-        
         <div class="col-md-4 display" id="List_Gallery">
-            <div class="row search-result">
-              <!-- dynamic Data -->
-            </div>
+        <!-- <span class="btn">
+            <button name="clearWishlist" id="clearWishList" class="clear_Wishlist" onclick="clearWishList()"> Clear Wishlist </button>
+        </span> -->
+        <div class="row search-result">
+            <!-- dynamic Data -->
+        </div>
                     
         </div>
         

@@ -70,14 +70,24 @@ var infowindow;
 //var myWishlist = [];
 
 if (searchCountry === null || searchCountry === "null"){
-    document.getElementById("selected_country").innerText = "None";
-    //setCountry("Aland");
+    document.getElementById("selected_country").innerText = "- No Selection Made -";
+    clearSession();
 }
 else{
-    document.getElementById("selected_country").innerText = " : " + searchCountry;
+    switch (searchCountry){
+        case "Faroe" : document.getElementById("selected_country").innerText = " : Faroe Island";
+            break;
+        case "Aland" : document.getElementById("selected_country").innerText = " : Åland";
+            break;
+        default : document.getElementById("selected_country").innerText = " : " + searchCountry;
+    }
+    
+    
+}
+if (searchCountry != null){
     setCountry(searchCountry); // highlights the country thumbnail
 }
-
+console.log("####" + searchCountry);
 function initMap() {
     infowindow = new google.maps.InfoWindow();
     switch(searchCountry){
@@ -124,7 +134,8 @@ function initMap() {
     };
     
     var service = new google.maps.places.PlacesService(map);
-    if(searchCountry != null || searchCountry != "null"){ 
+    
+    if(searchCountry != null){ 
         service.textSearch(request, callback);
     }
 }
@@ -138,8 +149,8 @@ function callback(results, status) {
                 if(i>=0){ // create multiple rows
                     var newRow = document.createElement("div");
                     newRow.classList.add = "row";
-                    newRow.classList.add = "search-result";
-                    
+                    // newRow.classList.add = "search-result";
+                    console.log("place = "+ place);
                     newRow.innerHTML = fetchSearchResults(place);
                 
                     document.getElementById("List_Gallery").appendChild(newRow);
@@ -198,11 +209,6 @@ function clearWishList(){
     localStorage.clear();
     alert("wishlist is cleared now!");
 }
-
-
-
-
-
 
  function setCountry(countryName){
      // This function highlights the country thumbnail

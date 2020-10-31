@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Grenze+Gotisch:wght@600&display=swap');
 body{
     margin: 0;
     width: 100%;
@@ -11,19 +13,23 @@ header{
     margin-left: 15px;
     width: 100%;
 }
+
 .siteheading{
-    height: 140px;
+    height: 150px;
     background: #AC3127;
-    font-family: "Luminari", sans-serif;
+    font-family: "Grenze Gotisch", sans-serif; /*"Luminari", sans-serif;*/
     font-weight: 400;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     padding-top: 45px;
     color: #fafafa;
     font-style: normal;
     letter-spacing: 2px;
 }
-
+.Menu{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
 .nav-bar{
     padding: 10px;
     text-align: right;
@@ -35,6 +41,7 @@ header{
 }
 .wishlist-color{
     color: red;
+    font-size: 22px;
 }
 .home-color{
     color:darkcyan;
@@ -45,6 +52,9 @@ header{
 #divSelect{
     display:none;
     text-align: center;
+}
+.wishlist_item{
+    padding: 10px;
 }
 /***** styles for the footer *********/
 /*.row {
@@ -134,7 +144,7 @@ footer a:hover{
 .site-intro{
     padding:20px;
     margin: 20px 0px;
-    font-family: "Crimson Text", sans-serif;
+    font-family: "Crimson Text", sans-serif; /* */
     font-size: 22px;
     letter-spacing: 2px;
     line-height: 26px;
@@ -249,7 +259,7 @@ footer a:hover{
 /* Tooltip text */
 .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 90px;
   background-color: rgb(251, 253, 241);
   color: #000;
   text-align: center;
@@ -257,10 +267,11 @@ footer a:hover{
   border-radius: 2px;
  
   /* Position the tooltip text - see examples below! */
-  bottom: 40%;
-  /* left: 0; */
+  bottom: 2%;
+  /* left: 10%;  */
   position: absolute;
   z-index: 1;
+  margin-left: -110px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -548,7 +559,7 @@ button{
     .siteheading{
         height: 100px;
         background: #AC3127;
-        font-family: "Luminari", sans-serif;
+        font-family: "Grenze Gotisch", sans-serif; 
         font-weight: 400;
         font-size: 20px;
         text-align: center;
@@ -589,14 +600,21 @@ button{
         width: 95%;
         text-align: center;  
     }
-    .search-result{
+    .display{ 
+    /* border: 1px black solid; */
+        height: 300px;
+        padding:10px; 
+        overflow: auto;   
+        width: 98%;
+}
+    /* .search-result{
         border: 1px black solid;
         padding: 20px;
         width: 98%;
         height: 98%;
         /* height: 180px; */
         overflow: auto;   
-    }
+    } */
     .row-position{ 
         padding: 10px;
         width: 95%;
