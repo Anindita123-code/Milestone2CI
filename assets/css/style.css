@@ -26,6 +26,23 @@ header{
     font-style: normal;
     letter-spacing: 2px;
 }
+
+/*Style for information message*/
+.Info-message {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing:  3px;
+    font-weight: 400;
+    /* font-style: bold; */
+    color: #7171be;
+    /* background: red; */
+    border: 1px, solid;
+}
+.info-style{
+    color: rgb(231, 191, 10);
+    font-size: 25px;
+}
 .Menu{
     font-family: "Roboto", sans-serif;
     font-size: 20px;
@@ -540,6 +557,7 @@ button{
     border:none;
     text-decoration: none;
 }
+
 /************** End of Styles **************************/
 /* Media query for heading */
 @media only screen 

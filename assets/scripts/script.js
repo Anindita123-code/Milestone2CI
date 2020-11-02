@@ -211,9 +211,14 @@ function addtoWishList(country, name, address, status){
 
 function clearWishList(){
     localStorage.clear();
-    alert("wishlist is cleared now!");
+    showAlert("Wishlist is Empty!");
 }
 
+function showAlert(text){
+    // document.getElementById("message").style.display = "block";
+    document.getElementById("message").innerHTML = '<i class="fa fa-info-circle info-style" aria-hidden="true"></i> ' + text + "<br>";
+   
+}
  function setCountry(countryName){
      // This function highlights the country thumbnail
     
