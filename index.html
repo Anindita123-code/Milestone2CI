@@ -170,6 +170,7 @@
    
     <div class="row no-gutters">
         <div class="col-md-12" id="divSelect">
+        <form action="" method="post">
             <select name="countryDropdown" id="countryDropdown">
                 <option value="none">--- Select ---</option>
                 <option value="Aland">Åland</option>
@@ -180,7 +181,10 @@
                 <option value="Norway">Norway</option>
                 <option value="Wweden">Sweden</option>
             </select>
-            <button name="search" id="search-by-country" class="" onclick="searchByCountry(document.getElementById('countryDropdown').value)"> Search </button>
+            <!-- onclick="searchByCountry(document.getElementById('countryDropdown').value)" -->
+            
+            <a href="#" class="" onclick="searchByCountry(document.getElementById('countryDropdown').value)"> <img src="assets/images/searchicon.png" height="20px" width="20px"></a>
+        </form>    
             <br><br>
         </div>
         <div class="col-md-12 country-list-container" id="CountryThumbnailDiv">    
@@ -236,13 +240,11 @@
         <!-- <span class="btn">
             <button name="clearWishlist" id="clearWishList" class="clear_Wishlist" onclick="clearWishList()"> Clear Wishlist </button>
         </span> -->
-        <div class="row search-result">
+        <div class="row search-result row-map">
             <!-- dynamic Data -->
         </div>
-                    
-        </div>
-        
-        <div class="col-md-8 map-container">
+    </div>    
+    <div class="col-md-8 map-container">
             <div id="map"><!--Google Map Display Area --></div>
         </div>
     </div>

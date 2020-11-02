@@ -87,7 +87,7 @@ else{
 if (searchCountry != null){
     setCountry(searchCountry); // highlights the country thumbnail
 }
-console.log("####" + searchCountry);
+//console.log("####" + searchCountry);
 function initMap() {
     infowindow = new google.maps.InfoWindow();
     switch(searchCountry){
@@ -150,7 +150,7 @@ function callback(results, status) {
                     var newRow = document.createElement("div");
                     newRow.classList.add = "row";
                     // newRow.classList.add = "search-result";
-                    console.log("place = "+ place);
+                    //console.log("place = "+ place);
                     newRow.innerHTML = fetchSearchResults(place);
                 
                     document.getElementById("List_Gallery").appendChild(newRow);
@@ -159,49 +159,53 @@ function callback(results, status) {
         }
 }
 function fetchSearchResults(place){
-    var htmlString = '<span class="col-md-8"><b>Name : '+place.name+ 
+    var htmlString = '<span class="col-md-8 "><b>Name : '+place.name+ 
                 '</b><br>'+place.formatted_address+
                 '<br>'+place.business_status+
-                '<br><br></span><span class="col-md-4"><button type="button" name="myWish" id="myWish" ';
-    //console.log(searchCountry);
-    var onclick_querystring = `onclick="addtoWishList('${searchCountry}','${place.name}', '${place.formatted_address}','${place.business_status}')" ><i class="fas fa-heart wishlist"></i></button></span>`;
-    //console.log(onclick_querystring);
-    return htmlString + onclick_querystring;
+                '<br><br></span><div class="col-md-4"><a href="" class="wishlist"';
+    var onclick_querystring = `onclick="addtoWishList('${searchCountry}','${place.name}', '${place.formatted_address}','${place.business_status}')" ><i class="fas fa-heart "></i><br></a></div>`;
+    return htmlString + onclick_querystring +"<br>";
 }
 
 function createMarker(place,i) {
 
     var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
-   // console.log(place); 
     const marker = new google.maps.Marker({map, //photos[0].getUrl({maxWidth: 35, maxHeight: 35})
         position: place.geometry.location,
         label: labels[i % labels.length]
     });
-    
-    // google.maps.event.addListener(marker, "click", () => {
-        //infowindow.setContent(place.name);
-        //infowindow.open(map);
-//   });
 }
 
 // **************** End Google Map **********************
 
 // **************** Scripts related to Wishlist *********
 function addtoWishList(country, name, address, status){
-    //alert(JSON.parse(localStorage.getItem("WishList")));
     var myWishlist = [];
    
         if(JSON.parse(localStorage.getItem("WishList")) != null){
             //console.log(">0");
             myWishlist = JSON.parse(localStorage.getItem("WishList"));
-            console.log(myWishlist);
-            myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
+            let isMatching = false;
+            for (let i=0; i<myWishlist.length;i++){
+               // alert(myWishlist[i][0]);
+               // alert(myWishlist[i][1][0]['g_name']);
+                if(myWishlist[i][0] === country && myWishlist[i][1][0]['g_name'] === name ){
+        //            alert("matching element found!");
+                    isMatching = true
+                }  
+            }
+            if (isMatching === false){
+               // alert("pushed");
+                myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
+            }
+            // else{
+            //    // alert("not pushed");
+            // }
         }else{
             //console.log("zero records");
             myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
         }
         localStorage.setItem ("WishList", JSON.stringify(myWishlist));
-        console.log(myWishlist);
               
 } 
 
@@ -226,6 +230,7 @@ function clearWishList(){
 
 function searchByCountry(countryName){
     sessionStorage.setItem("searchCountry", countryName);
+    document.querySelector("form").submit;
 }
 
 function clearSession()

@@ -193,7 +193,7 @@ footer a:hover{
     text-align: center;
 }
 
-#searchGallery {
+/* #searchGallery {
   width: 40%;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -205,7 +205,7 @@ footer a:hover{
   background-repeat:  no-repeat;
   background-size: contain;
   padding: 12px 20px 12px 45px;
-}
+} */
 
 /************ Styles for countries thumbnail list **************/
 .country-list-container{
@@ -362,9 +362,6 @@ footer a:hover{
 .wishlist{
     font-size: 20px;
     color: red;
-}
-.wishlist:checked{
-    color: darkmagenta;
 }
 .SearchResult{
     margin: 0, auto;
@@ -548,75 +545,88 @@ button{
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (-webkit-min-device-pixel-ratio: 2) 
+  {
     
-   #divSelect{
-       display:block;
-   }
-   #CountryThumbnailDiv{
-       display:none;
-   }
-    .siteheading{
-        height: 100px;
-        background: #AC3127;
-        font-family: "Grenze Gotisch", sans-serif; 
-        font-weight: 400;
-        font-size: 20px;
-        text-align: center;
-        padding-top: 40px;
-        color: #fafafa;
-        font-style: normal;
-        letter-spacing: 1px;
+    #divSelect{
+        display:block;
     }
-    .site-intro{
-        font-size: 18px;
-        letter-spacing: 1px;
-        line-height: 20px;
+    #CountryThumbnailDiv{
+        display:none;
     }
+        .siteheading{
+            height: 100px;
+            background: #AC3127;
+            font-family: "Grenze Gotisch", sans-serif; 
+            font-weight: 400;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 40px;
+            color: #fafafa;
+            font-style: normal;
+            letter-spacing: 1px;
+        }
+        .site-intro{
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
 
-    #searchGallery {
-        width: 80%;
+        #searchGallery {
+            width: 90%;
+        }
+        h5{
+            text-align: center;
+        }
+        .siteFooter{
+            background: #AC3127;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400; 
+            font-size: 15px;
+            color: #000000;    
+        }
+        .site-intro{
+            margin: 5px;
+        }
+        .pic-display{
+            margin: 10px;
+            padding: 10px;
+            width: 95%;
+        
+        }
+        .gallery_pic{
+            width: 95%;
+            text-align: center;  
+        }
+        .display{ 
+        /* border: 1px black solid; */
+            height: 300px;
+            padding:20px; 
+            overflow: auto;   
+            width: 98%;
+        }
+        .display-gap{
+            padding-top: 50px;
+        }
+                
+        .row-position{ 
+            padding: 10px;
+            width: 95%;
+        }
+        .map-container{
+            height: 400px;
+            width: 100%;
+        }
+        .SearchResult{
+            margin: 0, auto;
+            /* margin-top: 10px;
+            margin-bottom: 10px; */
+            /* padding: 10px; */
+            border: 1px, solid, gray;
+            box-shadow: 0 0 20px rgb(177, 176, 176);
+        }
+        .row-map{
+            margin-left: 0;
+            margin-right:0;
+        }
     }
-    h5{
-        text-align: center;
-    }
-    .siteFooter{
-        background: #AC3127;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400; 
-        font-size: 15px;
-        color: #000000;    
-    }
-    .site-intro{
-        margin: 5px;
-    }
-    .pic-display{
-        margin: 10px;
-        padding: 10px;
-        width: 95%;
-       
-    }
-    .gallery_pic{
-        width: 95%;
-        text-align: center;  
-    }
-    .display{ 
-    /* border: 1px black solid; */
-        height: 300px;
-        padding:10px; 
-        overflow: auto;   
-        width: 98%;
-}
-    /* .search-result{
-        border: 1px black solid;
-        padding: 20px;
-        width: 98%;
-        height: 98%;
-        /* height: 180px; */
-        overflow: auto;   
-    } */
-    .row-position{ 
-        padding: 10px;
-        width: 95%;
-    }
-}
