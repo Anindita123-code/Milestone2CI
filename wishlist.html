@@ -12,7 +12,6 @@
 </script>
 
 <title>Nordic Art Galleries Search Page</title>
-
 </head>
 <body onload="javascript:fetchfromWishList()">
     <header class="container-fluid"> 
@@ -40,17 +39,22 @@
         <!-- Dynamic results for wishlist carried forward from index page -->
     </div>
     <br>
+    <div id="message" class="Info-message"> -- your message here -- </div>
+    <br>
     <div class="row">
         <div class="col-xs-12 send-mail-section">
             <span class="send-email">
                 <!-- <i class="fas fa-envelope-square"></i> -->
                 <i class="far fa-envelope"></i> 
-                <input type="email" id="email" name="email" placeholder="youremail">
-                <button id="btnSendEmal" name="btnSendEmail" onclick="sendMail()"> Send Your Wishlist </button>
+                <input type="email" id="email" name="email" placeholder = "your email" class="email-input" >
+                <button id="btnSendEmal" name="btnSendEmail" onclick="sendMail()"> Send My Wishlist
+                <span id="loader" class="button-loader"></span>
+                </button>
             </span>
         </div>
     </div>
     </section>
+    <br>
     <footer class="container-fluid"> 
     <div class="row no-gutters siteFooter" >
         <div class="col-md-4"> 
@@ -58,10 +62,9 @@
             <p class="footer-text-normal"> Nordic Galleria Search helps you find any of the Art Galleries in the seven Nordic Countries. 
             </p>            
         </div>
-        
         <div class="col-md-4"> 
             <h5 id="contact-us" class="footer-text-normal social-links">
-                <a href="mailto:contact@nordicgalleria.com" target="_blank">
+                <a href="mailto:aartsandmore@gmail.com" target="_blank">
                 <i class="fas fa-envelope-square footer-icon-size">&nbsp;</i>Contact Us</a>
             </h5>   
         </div>
