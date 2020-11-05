@@ -427,14 +427,14 @@ input:focus::-webkit-input-placeholder
 .row-position{ 
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 15px;
     text-align: left;
-    width: 70%;
-    /* text-align: center;   */
+    width: 78%;
     background-color: white;
-    box-shadow: 0 0 20px rgb(177, 176, 176);
+    box-shadow: 0 0 8px rgb(177, 176, 176);
     padding: 15px 20px;
     margin: auto;
+    margin-top:24.5px;
 }
 
 .icon-position{
@@ -692,7 +692,7 @@ button{
             -webkit-animation: spin 2s linear infinite; /* Safari */
             animation: spin 2s linear infinite;
         }
-        .send-email #btnSendEmal{
+        #btnSendEmal{
             background-color: #5C500F;
             color: white;   
             padding:15px 44px;   

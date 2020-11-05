@@ -1,7 +1,13 @@
 
+document.addEventListener('load', function() {
+    if (localStorage.getItem("WishList") === null){
+        document.getElementById("message").innerHTML = "There are no items in your wishlist !!";
+    }
+});
 
 function fetchfromWishList(){
-    var myWishlist = JSON.parse(localStorage.getItem("WishList"));   
+    var myWishlist = JSON.parse(localStorage.getItem("WishList"));
+    
     for (let i=0; i < myWishlist.length ; i++){
         var newRow = document.createElement("div");
         newRow.className = "row-position";
@@ -16,7 +22,17 @@ function fetchfromWishList(){
 
 function parseWishlist(wish, i){
     var htmlOfPlaces = "";
-            var country = wish[0];
+            switch (wish[0]) {
+                case "Aland" :
+                    var country = "Åland";
+                    break;
+                case "Faroe" :
+                    var country = "Faroe Island";
+                    break;
+                default:
+                    var country = wish[0];
+            }
+            
             var objPlaces = wish[1][0];
             for (let place in objPlaces)
             {
@@ -60,11 +76,9 @@ function sendMail(){
             .then(function(response) {
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("message").innerHTML = "Email Sent Successfully!";
-                // + ": " + response.status + ", " + response.text;
             }, function(error) {
                 document.getElementById("loader").style.display = "none";
-                document.getElementById("message").innerHTML = "Email sending FAILED..." + error;
-                window.location.replace("../../Error.html");
+                document.getElementById("message").innerHTML = "Email sending FAILED, Please try with a valid email-id";
             });
    })();
 }
