@@ -1,9 +1,12 @@
-
-document.addEventListener('load', function() {
+window.onload = function() {
     if (localStorage.getItem("WishList") === null){
         document.getElementById("message").innerHTML = "There are no items in your wishlist !!";
+    }else {
+        fetchfromWishList();
     }
-});
+
+
+};
 
 function fetchfromWishList(){
     var myWishlist = JSON.parse(localStorage.getItem("WishList"));

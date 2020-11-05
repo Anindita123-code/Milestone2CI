@@ -13,7 +13,7 @@
 
 <title>Nordic Art Galleries Search Page</title>
 </head>
-<body onload="javascript:fetchfromWishList()">
+<body>
     <header class="container-fluid"> 
         <div class="row no-gutters">
             <div class="col-md-12 siteheading">
@@ -41,16 +41,15 @@
     <br>
     <div id="message" class="Info-message"> &nbsp; </div>
     <br>
-    <div class="row">
+    <div class="row no-gutters">
         <div class="col-xs-12 send-mail-section">
-            <span class="send-email">
-                <!-- <i class="fas fa-envelope-square"></i> -->
-                <i class="far fa-envelope"></i> 
+            <div class="send-email">
+                <i class="far fa-envelope"></i>
                 <input type="email" id="email" name="email" placeholder = "your email" class="email-input" >
                 <button id="btnSendEmal" name="btnSendEmail" onclick="sendMail()"> Send My Wishlist
                 <span id="loader" class="button-loader"></span>
                 </button>
-            </span>
+            </div>
         </div>
     </div>
     </section>

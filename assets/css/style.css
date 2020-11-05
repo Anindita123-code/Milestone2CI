@@ -403,11 +403,11 @@ input:focus::-webkit-input-placeholder
     color: transparent;
 }
 .button-loader {
-  border: 3px solid #3498db;
+  border: 2px solid #3498db;
   border-radius: 50%;
-  border-top: 3px solid #f3f3f3;
-  width: 20px;
-  height: 20px;
+  border-top: 2px solid #f3f3f3;
+  width: 15px;
+  height: 15px;
   display: none;
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
@@ -495,26 +495,30 @@ button{
 .send-email{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    padding: 20, 0;
+    display:inline-block;    
+
 }
 .send-email i{
-    font-weight: 400;
-    font-size: 30px;
-    padding-top: 4px;
-    margin: 5px;
-    
-}
+    /* font-weight: 400; */
+    font-size: 2em;
+  
+}    
 .send-email #email{
     
-    width: 30%;
-    padding: 8px 12px;
-    color: rgba(128, 128, 128, 0.014);
+    width: 180px;
+    padding: 5px;
+    height: 32px;
+    color: rgba(104, 81, 81, 0.719);
+    border-radius: 5%;
 }
 .send-email #btnSendEmal{
     background-color: #5C500F;
     color: white;   
-    padding:15px 44px;
-    /* width: 25%; */
-}
+    padding:6px 44px;
+    height: 35px;
+
+} 
 
 #emailTable {
   font-family: Arial, Helvetica, sans-serif;
