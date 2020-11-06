@@ -10,7 +10,15 @@
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 </script>
-
+<script type="text/javascript">
+window.onload = function() {
+    if (localStorage.getItem("WishList") === null){
+        document.getElementById("message").innerHTML = "There are no items in your wishlist !!";
+    }else {
+        fetchfromWishList();
+    }
+};
+</script>
 <title>Nordic Art Galleries Search Page</title>
 </head>
 <body>
@@ -35,6 +43,7 @@
     </header>
     <section class="container">
     <br>
+    <h1 class="heading-wishlist"> My Wishlist <img src="./assets/images/heart_wishlist.jpg" height="48" width="75"></h1> 
     <div id="WishlistDisplay">   
         <!-- Dynamic results for wishlist carried forward from index page -->
     </div>
@@ -70,22 +79,22 @@
         <div class="col-md-4 "> 
             <ul class="list-inline social-links">
                 <li class="list-inline-item">
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="http://www.linkedin.com">
                         <i class="fab fa-linkedin footer-icon-size footer-text"></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="http://www.twitter.com">
                         <i class="fab fa-twitter footer-icon-size footer-text"></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="http://www.instagram.com">
                         <i class="fab fa-instagram footer-icon-size footer-text"></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="http://www.facebook.com">
                         <i class="fab fa-facebook-square footer-icon-size footer-text"></i>
                     </a>
                 </li>
@@ -93,7 +102,7 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="assets/scripts/wishlist_scripts.js"></script>
+<script type="text/javascript" src="assets/scripts/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

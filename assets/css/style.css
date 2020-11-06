@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Grenze+Gotisch:wght@600&display=swap');
+
 body{
     margin: 0;
     width: 100%;
 }
-
 header{
     margin: 0;
     margin-left: 15px;
     width: 100%;
 }
-
 .siteheading{
     height: 150px;
     background: #AC3127;
@@ -34,16 +32,13 @@ header{
     text-align: center;
     letter-spacing:  3px;
     font-weight: 400;
-    /* font-style: bold; */
     color: #7171be;
-    /* background: red; */
     border: 1px, solid;
 }
 .info-style{
     color: rgb(231, 191, 10);
     font-size: 25px;
 }
-
 .Menu{
     font-family: "Roboto", sans-serif;
     font-size: 20px;
@@ -75,11 +70,6 @@ header{
     padding: 10px;
 }
 /***** styles for the footer *********/
-/*.row {
-    margin-right: -20px;
-    margin-left: -20px;
-}*/
-
 footer{
     width: 100%;
     margin: 2px;
@@ -108,7 +98,6 @@ footer a:hover{
     text-decoration: underline;
     text-align: left;
 }
-
 .footer-icon-size{
     font-size: 25px;
 }
@@ -126,7 +115,6 @@ footer a:hover{
 #contact-us a:hover{
     color: #fafafa;
 }
-
 .social-links {
     padding: 35px 38px;
     padding-bottom: 10px;
@@ -145,11 +133,7 @@ footer a:hover{
 .social-links li a i:hover {
     color: #FAFAFA;
 }
-/*.copyright{
-    padding: 10px;
-    text-align: right;
-}*/
-/*------------------------styles for section element---*/
+/******** styles for section element *************/
 #map{
     height: 100%;
     margin: 0;
@@ -170,20 +154,12 @@ footer a:hover{
     background: #fcfaf0;
     box-shadow: 0 0 20px rgb(177, 176, 176);
 }
-
-/*.pic-container{
-    border: 1px, solid;
-    width: 50%;
-    height: 75%;
-}*/
-
 .pic-nav{
     font-size: 40px;
     text-align: center;
     padding: 110px 10px;
     width: 20%;
 }
-
 .pic-display{
     margin: 20px;
     margin-left: 50px;
@@ -193,8 +169,6 @@ footer a:hover{
     box-align: center;
     box-shadow: 0 0 30px rgb(133, 131, 131);
 }
-
-
 #previous-pic{
     margin: 0 20px;
     /*padding: 0 20px;*/
@@ -211,70 +185,37 @@ footer a:hover{
     text-align: center;
 }
 
-/* #searchGallery {
-  width: 40%;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 14px;
-  background-color: white;
-  background-image: url('/assets/images/searchicon.png');
-  background-position: 1px 1px; 
-  background-repeat:  no-repeat;
-  background-size: contain;
-  padding: 12px 20px 12px 45px;
-} */
-
 /************ Styles for countries thumbnail list **************/
 .country-list-container{
     background-color: #575454;
     text-align: center;
     padding: 10px 0 0 10px;
 }
-/* .countryThumbnail{ */
-    /* margin: 20px;; */
-    /* padding: 40px; */
-/* } */
- .circleContainer1{ 
+.circleContainer1{ 
     width: 102px;
     height: 102px;
-    /* border: 1px, solid, white;  */
-    
     border-radius: 50%;
-    /* border-width: 10px; */
-    /* box-shadow: inset 0 0 0 20px rgba(214, 11, 82, 0.73); */
 }
 .countryThumbnail a img{
     width: 100px;
     height: 100px;
-    /* border: 1px, solid, white;  */
     border-radius: 50%;
     border-style: solid;
     border-color:whitesmoke;
     border-width: 1px;
     margin: 20px;
-    /* box-shadow: outset 0 0 0 20px rgba(214, 11, 82, 0.73) */
 }
-
 .countryThumbnail a img:hover{
     -webkit-box-shadow: 0px 0px 8px 8px white;
     -moz-box-shadow: 0px 0px 8px 8px light white;
     box-shadow: 0px 0px 8px 8px light white;
 }
-
 .countryThumbnail a img::after{
     border-width: 3px;
 }
-/******************* tooltip style ***********************/
-/*.tooltip {
-  position: relative;
-  display: inline-block;
-  font-size: 20px;
-  color: white;
-  border-bottom: 1px dotted black;
-}*/
+/******************* Thumbnail Countryname style ***********************/
 
-/* Tooltip text */
+/****** Countryname text ***********/
 .tooltiptext {
   visibility: hidden;
   width: 90px;
@@ -283,31 +224,24 @@ footer a:hover{
   text-align: center;
   padding: 2px 0;
   border-radius: 2px;
- 
-  /* Position the tooltip text - see examples below! */
+  /****** Position the Countryname text **************/
   bottom: 2%;
-  /* left: 10%;  */
   position: absolute;
   z-index: 1;
   margin-left: -110px;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
+/***** Show the countryname text when you mouse over the country thumbnail */
 .countryThumbnail:hover .tooltiptext {
   visibility: visible;
 }
-/******************* end tooltip *************************/
+/******************* end Countryname Display *************************/
 
-
-/********************* Carousel Styles********************/
+/********************* Carousel Styles ********************/
 /* alignment of Carousel*/
-.carousel-center
-{
+.carousel-center{
     text-align: center;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -322,22 +256,16 @@ footer a:hover{
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 .prev{
     left: 0;
 }
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.2);
 }
-
-
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -346,11 +274,8 @@ footer a:hover{
   bottom: 8px;
   width: 100%;
   text-align: center;
-  /* background-color: rgba(0,0,0,0.4); */
   left: 0;
 }
-
-/* Number text (1/7 etc) */
 .numbertext {
   color: #000;
   background-color: #f2f2f2;
@@ -360,8 +285,6 @@ footer a:hover{
   top: 0;
   left: 0;
 }
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 10px;
@@ -375,8 +298,9 @@ footer a:hover{
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /****************** End Carousel Styles ******************/
+
+/****************** Styles for Wishlist section on Index page ******************/
 .wishlist{
     font-size: 20px;
     color: red;
@@ -390,18 +314,31 @@ footer a:hover{
     box-shadow: 0 0 20px rgb(177, 176, 176);
 }
 .display{ 
-    /* border: 1px black solid; */
     height: 600px; 
     overflow: auto;   
 }
 .clear_Wishlist{
     text-align: center;
 }
+
 /*************** Styles for Wishlist Page *****************/
-input:focus::-webkit-input-placeholder 
-{
+.heading-wishlist{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: left;
+    width: 78%;
+    padding: 15px 20px;
+    margin: auto;
+}
+.heading-wishlist img{
+    width: 75px;
+    height: 40px;
+}
+input:focus::-webkit-input-placeholder {
     color: transparent;
 }
+/* loader styles on send email */
 .button-loader {
   border: 2px solid #3498db;
   border-radius: 50%;
@@ -418,12 +355,10 @@ input:focus::-webkit-input-placeholder
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 .row-position{ 
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -436,28 +371,12 @@ input:focus::-webkit-input-placeholder
     margin: auto;
     margin-top:24.5px;
 }
-
 .icon-position{
     font-size: 20px;
     text-align: center;
     margin-left: 20px; 
-    /* margin-right: 20px; */
     padding-left: 20px;
 }
-
-input[type=checkbox] {
-    transform: scale(1.5);
-}
-
-/* .text-position{
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: left;
-    /* margin-left:10px; */
-    /* margin-right: 10px; */
-    /* padding: 10px 30px; */  
- */
 button{
     border: none;
     border-radius: 10px;
@@ -468,7 +387,6 @@ button{
 .button-container{
     text-align: center;
 }
-
 #btnWishlist{
     color: white;
     background-color: #1685AD;
@@ -480,11 +398,9 @@ button{
     color: black;
     text-decoration: none;
 }
-
 .button-container a:hover{
     text-decoration: underline;
 }
-
 .send-mail-section{
     border: 20px;
     padding: 30px;
@@ -500,12 +416,9 @@ button{
 
 }
 .send-email i{
-    /* font-weight: 400; */
-    font-size: 2em;
-  
+    font-size: 2em;  
 }    
 .send-email #email{
-    
     width: 180px;
     padding: 5px;
     height: 32px;
@@ -517,32 +430,7 @@ button{
     color: white;   
     padding:6px 44px;
     height: 35px;
-
-} 
-
-#emailTable {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
 }
-
-#emailTable td, #emailTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#emailTable tr:nth-child(even){background-color: #f2f2f2;}
-
-#emailTable tr:hover {background-color: #ddd;}
-
-#emailTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: rgb(167, 20, 20);
-  color: white;
-}   
-
 /**************End of Styles for Wishlist Page *****************/
 
 /************** Styles for Error Page *******************/
@@ -555,35 +443,29 @@ button{
     text-align: right;
 }
 .error-pic{
-    /* padding: 0, 30px; */
     background-image: url('/assets/images/oops.png');
     height: 300px;
     width:310px;
     background-position: center; /* Center the image */
-    /* margin: 0, auto; */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: no-repeat;
     background-size: cover;
 }
 .error-text{
     margin: 20px;
     padding: 20px;
-    line-height: 30px;
- 
+    line-height: 30px; 
 }
-
 .error-text h2{
     font-family: "Oswald", sans-serif;
     font-size: 30px;
     font-weight: 600;
     text-align: center;
 }
-
 .error-text p{
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     padding: 5px 35px;
 }
-
 #myWish{
     border: none;
     font-size: 20px;
@@ -593,20 +475,18 @@ button{
     text-decoration: none;
 }
 
-/************** End of Styles **************************/
-/* Media query for heading */
+/******* Media query for heading *********/
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) 
   {
-    
-    #divSelect{
-        display:block;
-    }
-    #CountryThumbnailDiv{
-        display:none;
-    }
+        #divSelect{
+            display:block;
+        }
+        #CountryThumbnailDiv{
+            display:none;
+        }
         .siteheading{
             height: 100px;
             background: #AC3127;
@@ -624,7 +504,6 @@ button{
             letter-spacing: 1px;
             line-height: 20px;
         }
-
         #searchGallery {
             width: 90%;
         }
@@ -645,14 +524,12 @@ button{
             margin: 10px;
             padding: 10px;
             width: 95%;
-        
         }
         .gallery_pic{
             width: 95%;
             text-align: center;  
         }
         .display{ 
-        /* border: 1px black solid; */
             height: 300px;
             padding:20px; 
             overflow: auto;   
@@ -672,9 +549,6 @@ button{
         }
         .SearchResult{
             margin: 0, auto;
-            /* margin-top: 10px;
-            margin-bottom: 10px; */
-            /* padding: 10px; */
             border: 1px, solid, gray;
             box-shadow: 0 0 20px rgb(177, 176, 176);
         }
@@ -700,7 +574,10 @@ button{
             background-color: #5C500F;
             color: white;   
             padding:15px 44px;   
-            /* padding:15px 44px; */
-            /* width: 120px; */
         }
+        .heading-wishlist img{
+            width: 50px;
+            height: 30px;
+        }
+
     }

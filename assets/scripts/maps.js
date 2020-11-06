@@ -1,8 +1,8 @@
 //************************************************ */
 // Google Maps Coding
 //************************************************ */
-
-//const ApiKey = "AIzaSyCeetcMkyfLKX-96r4V__MikIyrXS17Hjw";
+/** Declare constants for latitude and longitude coordinates of the 7 Nordic Countries */
+//************************************************ */
 const norwayLat = 59.906932;
 const norwayLng = 10.721243;
 const swedenLat = 57.522434;
@@ -18,54 +18,71 @@ const faroeLng = -6.865365;
 const alandLat = 60.245031;
 const alandLng = 19.953666;
 
-//Global Variable for countrySearch
+//************************************************ */
+// Global Variable for countrySearch
+//************************************************ */
 var searchCountry = sessionStorage.getItem("searchCountry");
 var map;
 var infowindow;
 
-if (searchCountry === null || searchCountry === "null"){
-    document.getElementById("selected_country").innerText = "- No Selection Made -";
-    clearSession();
-}
-else{
-    switch (searchCountry){
-        case "Faroe" : document.getElementById("selected_country").innerText = " : Faroe Island";
-            break;
-        case "Aland" : document.getElementById("selected_country").innerText = " : Åland";
-            break;
-        default : document.getElementById("selected_country").innerText = " : " + searchCountry;
+//* Call function to show the current selection of country by the user */
+showSelection()
+
+//************************************************ */
+// Function to Display the name of the selected Nordic country 
+//************************************************ */
+function showSelection(){
+    if (searchCountry === null || searchCountry === "null"){
+        document.getElementById("selected_country").innerText = "- No Selection Made -";
+        clearSession();
+    }
+    else{
+        switch (searchCountry){
+            case "Faroe" : document.getElementById("selected_country").innerText = " : Faroe Island";
+                break;
+            case "Aland" : document.getElementById("selected_country").innerText = " : Åland";
+                break;
+            default : document.getElementById("selected_country").innerText = " : " + searchCountry;
+        }
+    }
+    if (searchCountry != null){
+        //************************* */
+        // function call to highlight the country's thumbnail
+        //************************* */
+        setCountry(searchCountry); 
     }
 }
-if (searchCountry != null){
-    setCountry(searchCountry); // highlights the country thumbnail
-}
 
+//************************************** */
+//**** Display the Map with the query to fetch results */
+//************************************** */
 function initMap() {
+    let country;
     infowindow = new google.maps.InfoWindow();
     switch(searchCountry){
         case 'Aland'://Åland
-            var country = new google.maps.LatLng(alandLat, alandLng);
+            country = new google.maps.LatLng(alandLat, alandLng);
             break;
         case 'Denmark': 
-            var country = new google.maps.LatLng(denmarkLat, denmarkLng);
+            country = new google.maps.LatLng(denmarkLat, denmarkLng);
             break;
         case 'Norway':
-            var country = new google.maps.LatLng(norwayLat, norwayLng);
+            country = new google.maps.LatLng(norwayLat, norwayLng);
             break;
         case 'Sweden':
-            var country = new google.maps.LatLng(swedenLat, swedenLng);
+            country = new google.maps.LatLng(swedenLat, swedenLng);
             break;
         case 'Greenland':
-            var country = new google.maps.LatLng(greenlandLat, greenlandLng);
+            country = new google.maps.LatLng(greenlandLat, greenlandLng);
             break;
         case 'Finland':
-            var country = new google.maps.LatLng(finlandLat, finlandLng);
+            country = new google.maps.LatLng(finlandLat, finlandLng);
             break;
         case 'Faroe':
-            var country = new google.maps.LatLng(faroeLat, faroeLng);
+            country = new google.maps.LatLng(faroeLat, faroeLng);
             break;
         default:
-            var country = new google.maps.LatLng(59.559208, 11.244315);
+            country = new google.maps.LatLng(59.559208, 11.244315);
     }
    
     map = new google.maps.Map(document.getElementById("map"), {
@@ -81,45 +98,59 @@ function initMap() {
         fields: ["place_id", "name", "geometry", "formatted_address", "business_status", "photos"],
     };
     
-    var service = new google.maps.places.PlacesService(map);
+    let service = new google.maps.places.PlacesService(map);
     
     if(searchCountry != null){ 
         service.textSearch(request, callback);
     }
 }
 
+//************************************* */
+// Callback function for rendering Google Maps
+//************************************* */
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            var place = results[i];
+        for (let i = 0; i < results.length; i++) {
+            let place = results[i];
             createMarker(results[i],i);
-            if(i>=0){ // create multiple rows
-                var newRow = document.createElement("div");
+            //***************************** */
+            // if there are more than one results, then create multiple rows
+            //***************************** */
+            if(i>=0){ 
+                let newRow = document.createElement("div");
                 newRow.classList.add = "row";
                 newRow.innerHTML = fetchSearchResults(place,i);
-            
                 document.getElementById("List_Gallery").appendChild(newRow);
             }
         }
+    } else {
+        location.replace("../../Error.html");
     }
 }
 
-function fetchSearchResults(place, index){
-    var htmlString = '<span class="col-md-8 "><b>Name : '+place.name+ 
-                '</b><br>'+place.formatted_address+
-                '<br>'+place.business_status+
-                '<br><br></span><div class="col-md-4"><button id = "btn'+index+'" class="wishlist"';
-    var onclick_querystring = `onclick="addtoWishList('${index}','${searchCountry}','${place.name}', '${place.formatted_address}','${place.business_status}')" ><i class="fas fa-heart "></i><br></button></div>`;
-    console.log(htmlString+onclick_querystring);
-    return htmlString + onclick_querystring +"<br>";
-}
-
+//******************************** */
+// Function to Create the location markers on map
+//********************************* */
 function createMarker(place,i) {
-    var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+    let labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
     const marker = new google.maps.Marker({map, //photos[0].getUrl({maxWidth: 35, maxHeight: 35})
         position: place.geometry.location,
         label: labels[i % labels.length]
     });
 }
 
-// **************** End Google Map **********************
+//********************************** */
+// Function to Fetch the Search Results of Galleries / Museums on the left side of the map
+//********************************** */
+function fetchSearchResults(place, index){
+    if(place.business_status === null || place.business_status == 'undefined'){
+        place.business_status = "";
+    }
+    let htmlString = '<span class="col-md-8 "><b>Name : '+place.name+ 
+                '</b><br>'+place.formatted_address+
+                '<br>'+place.business_status+
+                '<br><br></span><div class="col-md-4"><button id = "btn'+index+'" class="wishlist"';
+    let onclick_querystring = `onclick="addtoWishList('${index}','${searchCountry}','${place.name}', '${place.formatted_address}','${place.business_status}')" ><i class="fas fa-heart "></i><br></button></div>`;    
+    
+    return htmlString + onclick_querystring +"<br>";
+}
