@@ -40,20 +40,24 @@ function clearSession() {
 //********************************************* */
 function addtoWishList(btnIndex, country, name, address, status){
     let myWishlist = [];
+    
         if(JSON.parse(localStorage.getItem("WishList")) != null){
             myWishlist = JSON.parse(localStorage.getItem("WishList"));
+            console.log(myWishlist);
             let isMatching = false;
             for (let i=0; i<myWishlist.length;i++){
                 if(myWishlist[i][0] === country && myWishlist[i][1][0]['g_name'] === name ){
                     isMatching = true
                 }  
             }
+            console.log(isMatching);
             if (isMatching === false){
                 myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
             }
         }else {
             myWishlist.push([country, [{ g_name: name, g_address: address, g_status: status}]]);
         }
+        console.log("btn"+btnIndex);
         localStorage.setItem ("WishList", JSON.stringify(myWishlist));
         
         document.getElementById("btn"+btnIndex).innerHTML = '<i class="far fa-heart wishlist-color"></i>';

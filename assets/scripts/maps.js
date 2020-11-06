@@ -143,6 +143,18 @@ function createMarker(place,i) {
 // Function to Fetch the Search Results of Galleries / Museums on the left side of the map
 //********************************** */
 function fetchSearchResults(place, index){
+    let formatted_address; 
+    let name;
+    if(place.formatted_address.indexOf("'")>-1){
+        formatted_address = place.formatted_address.replace("'","");
+    }else {
+        formatted_address = place.formatted_address;
+    }
+    if(place.name.indexOf("'")>-1){
+        name = place.name.replace("'","");
+    }else {
+        name = place.name;
+    }
     if(place.business_status === null || place.business_status == 'undefined'){
         place.business_status = "";
     }
@@ -150,7 +162,6 @@ function fetchSearchResults(place, index){
                 '</b><br>'+place.formatted_address+
                 '<br>'+place.business_status+
                 '<br><br></span><div class="col-md-4"><button id = "btn'+index+'" class="wishlist"';
-    let onclick_querystring = `onclick="addtoWishList('${index}','${searchCountry}','${place.name}', '${place.formatted_address}','${place.business_status}')" ><i class="fas fa-heart "></i><br></button></div>`;    
-    
+    let onclick_querystring = `onclick="addtoWishList('${index}','${searchCountry}','${name}', '${formatted_address}','${place.business_status}')" ><i class="fas fa-heart "></i><br></button></div>`;    
     return htmlString + onclick_querystring +"<br>";
 }
