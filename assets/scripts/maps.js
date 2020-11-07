@@ -146,12 +146,12 @@ function fetchSearchResults(place, index){
     let formatted_address; 
     let name;
     if(place.formatted_address.indexOf("'")>-1){
-        formatted_address = place.formatted_address.replace("'","");
+        formatted_address = place.formatted_address.replace("'","~");
     }else {
         formatted_address = place.formatted_address;
     }
     if(place.name.indexOf("'")>-1){
-        name = place.name.replace("'","");
+        name = place.name.replace("'","~");
     }else {
         name = place.name;
     }
