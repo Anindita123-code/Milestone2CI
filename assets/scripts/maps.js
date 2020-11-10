@@ -158,10 +158,10 @@ function fetchSearchResults(place, index){
     if(place.business_status === null || place.business_status == 'undefined'){
         place.business_status = "";
     }
-    let htmlString = '<span class="col-md-8 "><b>Name : '+place.name+ 
+    let htmlString = '<div class="col-md-8 "><b>Name : '+place.name+ 
                 '</b><br>'+place.formatted_address+
                 '<br>'+place.business_status+
-                '<br><br></span><div class="col-md-4"><button id = "btn'+index+'" class="wishlist"';
+                '<br><br></div><div class="col-md-4"><button id = "btn'+index+'" class="wishlist"';
     let onclick_querystring = `onclick="addtoWishList('${index}','${searchCountry}','${name}', '${formatted_address}','${place.business_status}')" ><i class="fas fa-heart "></i><br></button></div>`;    
     return htmlString + onclick_querystring +"<br>";
 }

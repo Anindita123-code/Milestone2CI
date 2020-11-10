@@ -33,7 +33,7 @@ header{
     letter-spacing:  3px;
     font-weight: 400;
     color: #7171be;
-    border: 1px, solid;
+    
 }
 .info-style{
     color: rgb(231, 191, 10);
@@ -141,7 +141,7 @@ footer a:hover{
 }
 .map-container{
     height: 600px;
-    width: 770x;
+    width: 700px;
 }
 .site-intro{
     padding:20px;
@@ -166,12 +166,11 @@ footer a:hover{
     align-items: center;
     width: 80%;
     height: 100%;
-    box-align: center;
+    /* box-align: center; */
     box-shadow: 0 0 30px rgb(133, 131, 131);
 }
 #previous-pic{
     margin: 0 20px;
-    /*padding: 0 20px;*/
     text-align: right;
     font-size: 35px;
 }
@@ -207,8 +206,8 @@ footer a:hover{
 }
 .countryThumbnail a img:hover{
     -webkit-box-shadow: 0px 0px 8px 8px white;
-    -moz-box-shadow: 0px 0px 8px 8px light white;
-    box-shadow: 0px 0px 8px 8px light white;
+    -moz-box-shadow: 0px 0px 8px 8px white;
+    box-shadow: 0px 0px 8px 8px white;
 }
 .countryThumbnail a img::after{
     border-width: 3px;
@@ -241,6 +240,10 @@ footer a:hover{
 /* alignment of Carousel*/
 .carousel-center{
     text-align: center;
+}
+.gallery_pic{
+    width: 390px;
+    height: 245px;
 }
 .prev, .next {
   cursor: pointer;
@@ -306,11 +309,11 @@ footer a:hover{
     color: red;
 }
 .SearchResult{
-    margin: 0, auto;
+    margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 10px;
-    border: 1px, solid, gray;
+    border: 1px solid gray;
+    padding: 5px;
     box-shadow: 0 0 20px rgb(177, 176, 176);
 }
 .display{ 
@@ -411,7 +414,7 @@ button{
 .send-email{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    padding: 20, 0;
+    padding: 20px 0px;
     display:inline-block;    
 
 }
@@ -475,10 +478,10 @@ button{
     text-decoration: none;
 }
 
-/******* Media query for heading *********/
+/******* Media query for iphone and other phones heading *********/
 @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
+  and (min-width: 320px) 
+  and (max-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) 
   {
         #divSelect{
@@ -531,9 +534,9 @@ button{
         }
         .display{ 
             height: 300px;
-            padding:20px; 
+            padding:5px; 
             overflow: auto;   
-            width: 98%;
+            width: 100%;
         }
         .display-gap{
             padding-top: 50px;
@@ -545,12 +548,17 @@ button{
         }
         .map-container{
             height: 400px;
+            /* width: 335px; */
             width: 100%;
         }
+        #map {
+            height: 400px;
+        }
         .SearchResult{
-            margin: 0, auto;
-            border: 1px, solid, gray;
-            box-shadow: 0 0 20px rgb(177, 176, 176);
+            margin: 0 auto;
+            margin-top: 5px;
+            border: 1px solid gray;
+            box-shadow: 0 0 5px rgb(177, 176, 176);
         }
         .row-map{
             margin-left: 0;
@@ -581,3 +589,23 @@ button{
         }
 
     }
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1366px){
+    .map-container {
+          width: 100%;
+      }
+    .display{ 
+        height: 300px;
+        padding-top:30px;
+        padding-left: 50px;
+
+        overflow: auto;   
+        width: 100%;
+    }
+    .gallery_pic {
+        width: 250px;
+        height: 200px;
+    }
+  }

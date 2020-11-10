@@ -7,10 +7,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 </script>
-<script type="text/javascript">
+<script >
 window.onload = function() {
     if (localStorage.getItem("WishList") === null){
         document.getElementById("message").innerHTML = "There are no items in your wishlist !!";
@@ -43,7 +42,7 @@ window.onload = function() {
     </header>
     <section class="container">
     <br>
-    <h1 class="heading-wishlist"> My Wishlist <img src="./assets/images/heart_wishlist.jpg" height="48" width="75"></h1> 
+    <h1 class="heading-wishlist"> My Wishlist <img src="./assets/images/heart_wishlist.jpg" height="48" width="75" alt = "Wishlist-icon"></h1> 
     <div id="WishlistDisplay">   
         <!-- Dynamic results for wishlist carried forward from index page -->
     </div>
@@ -102,7 +101,7 @@ window.onload = function() {
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="assets/scripts/script.js"></script>
+<script src="assets/scripts/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
