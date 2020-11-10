@@ -1,10 +1,11 @@
 # Milestone 2 Project
+
 # Nordics Art Galleria Search
 
 ## Overview :
 The Nordic Arts Galleria Search is a search site for the Art Galleries of Nordic Countries namely
 Åland, Denmark, Norway, Greenland, Faroe Island, Finland and Sweden. This site helps its users to filter by Country Name and display the Art gallery and Museums as a list, that are at a radius of 5000 from the marked latitude and longitudes for the respective countries.
-The users can then select from one or more results from the filtered list of Art Galleries using the heart and add these to a wishlist. The selected items from the index page can be viewed in the wishlist page and optionally can be emailed to the email address that is provided by the user.
+The users can then select from one or more results from the filtered list of Art Galleries using the corresponding heart button and add these to a wishlist. The selected items from the Home page can be viewed in the My Wishlist page and optionally can be emailed to the email address that is provided by the user.
 
 ## UX:
 This project aims to fulfil the user stories as mentioned below
@@ -13,7 +14,7 @@ This project aims to fulfil the user stories as mentioned below
 3. As a user, I should be able to see a little more details (viz Names, Addresses and the status) of the selected and marked locations on the google map for each country.
 4. As a user, I should be able to select each gallery / Museum listed on the right / below and add them to a wishlist.
 5. As a user, I should be able to clear my wishlist (all items together)
-6. As a user, I should be able to view my wishlist of selected addresses.
+6. As a user, I should be able to view my wishlist of selected places using the corresponding heart button.
 7. As a user, I should be able to delete individual wishlist items from the displayed list.
 8. As a user, I should be able to send the wishlist to a pre-specified emailid.
 9. As a user, I should be provided with necessary information and error messages (if any) 
@@ -21,7 +22,7 @@ This project aims to fulfil the user stories as mentioned below
 
 The wireframes of all the three pages of Nordic Art Galleria Search (Home Page, Wishlist Page and Error Page) are linked below for further references
 This includes wireframes for both desktop and mobile 
-***Wireframe Link *** [/assets/Wireframes/MS2Wireframes.pdf]
+[Wireframe Link](/assets/Wireframes/MS2Wireframes.pdf]) 
 
 ## Features
 
@@ -52,15 +53,17 @@ The following technologies, frameworks and libraries have been used to create th
 ## Testing
 
 The [W3C Markup Validator](https://validator.w3.org/) has been used to validate all the HTML markup pages of the project - Valid
+
 The [W3C CSS Validator](https://jigsaw.w3.org/) has been used to validate the CSS used in the project - Valid
-The [javascript Validator] (https://jshint.com/) has been used to validate the javascript in the project - Valid
+
+The [javascript Validator](https://jshint.com/) has been used to validate the javascript in the project - Valid
 
 This website has been tested manually using Google Chrome browser. The website works on mobile phones, Ipads and laptop screen sizes.
 
 **Testing User Stories from User Experience (UX) Section**
 
 **1. As a user, I should be able to understand what the site offers.**
-On opening the site, there is a short description on the left, detailing the working of the site. There is a carousel on the right which can take the user through the museums of Art Museums of 7 Nordic countries. The user can use the previous or next symbols or the dot notations underneath to scroll through the images.
+On opening the site, there is a short description on the left, detailing the working of the site. There is a carousel on the right which can take the user through the Art Museums of 7 Nordic countries. The user can use the previous or next symbols or the dot notations underneath to scroll through the images.
 
 **2. As a user, I should be able to filter by any of the specified Nordic country and display the locations of the galleries on the google map UI.**
 As a user, I am able to hover through the round thumbnails of the various countries and I can see the names of the countries appear below the round thumbnail displays
@@ -126,8 +129,16 @@ When I click on the Contact US icon at the middle of the footer, I am redirected
 * A large amount of testing was done to ensure that all pages were linking correctly.
 
 ## Deployment
-This application is deployed in the github - main branch in the below repository.
-* Repo here *
+
+**GitHub Pages**
+The project was deployed to GitHub Pages using the following steps...
+
+    a. Log in to GitHub and locate the GitHub Repository
+    b. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+    c. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+    d. Under "Source", click the dropdown called "None" and select "Master Branch".
+    e. The page will automatically refresh.
+    f. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
 ## Credits
 * The fonts used in this site has been taken from Google Fonts.
