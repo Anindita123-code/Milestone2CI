@@ -142,7 +142,7 @@ The project was deployed to GitHub Pages using the following steps...
     * e. The page will automatically refresh.
     * f. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
-## Credits
+## Credit
 * The fonts used in this site has been taken from Google Fonts.
 * AdobeXD - Desktop version for creating Wireframes for this project [AdobeXD] (https://www.adobe.com/products/xd.html)
 * The images used in this site has been taken from depositimages and shutterstock and random search using google.
