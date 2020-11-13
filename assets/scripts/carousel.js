@@ -20,7 +20,7 @@ function currentSlide(n) {
 // Function to Display only the current slides and hides all the other slides 
 //*************************************** */
 function showSlides(n) {
-
+console.log(n);
   let i;
   let slides = document.getElementsByClassName("picSlides");
   let dots = document.getElementsByClassName("dot");
