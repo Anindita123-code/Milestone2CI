@@ -135,12 +135,13 @@ When the user makes a selection of country, the selected country name is added t
 **GitHub Pages**
 The project was deployed to GitHub Pages using the following steps...
 
-    * a. Log in to GitHub and locate the GitHub Repository
-    * b. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    * c. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-    * d. Under "Source", click the dropdown called "None" and select "Master Branch".
-    * e. The page will automatically refresh.
-    * f. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+7. Share the Published link for further evaluation.
 
 ## Credit
 * The fonts used in this site has been taken from Google Fonts.
@@ -150,5 +151,5 @@ The project was deployed to GitHub Pages using the following steps...
 * For html and css help, I have referred to W3C School and MDN.
 * For Email Sending, I have referred to the documentation for EMailJS API
 * For Google Map Search, I have referred to the documentation for Google Maps API.
-* I am thankful to the Code Institute Mentor, for guiding me through this project by sharing critical insights on occasion when I needed them the most.
+* I am thankful to my Mentor from Code Institute for guiding me through this project by sharing critical insights on occasion when I needed them the most.
     
