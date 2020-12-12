@@ -21,7 +21,7 @@
 //******************************************** */
 function searchByCountry(countryName){
     sessionStorage.setItem("searchCountry", countryName);
-    document.querySelector("form").submit;
+    //document.querySelector("form").submit;
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
         location.reload();
     }
@@ -142,7 +142,7 @@ function sendMail(){
     document.getElementById("loader").style.display = "inline-block";
     let myList = JSON.parse(localStorage.getItem("WishList"));
     (function(){
-        emailjs.init("user_9tv1BSdrIPXy39aw6nHuB");
+       // emailjs.init("user_9tv1BSdrIPXy39aw6nHuB");
         let templateParams = {
             from_name: "Nordic Art Gallery Search",
             from_email: "Arts & More",
@@ -159,13 +159,15 @@ function sendMail(){
 //************************************** */
 
 var sendEMail = function (parameters) {
+    alert(parameters);
    emailjs.send('gallerySearch', 'wishlist', parameters)
         .then(function(response) {
             document.getElementById("loader").style.display = "none";
             document.getElementById("message").innerHTML = "Email Sent Successfully!";
         }, function(error) {
+            alert(error.status);
             if (error.status != 412) {
-                location.replace("../../Error.html");
+                location.replace("/Error.html");
             }else {
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("message").innerHTML = "Email sending FAILED, Please try with a valid email-id";
