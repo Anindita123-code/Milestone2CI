@@ -170,12 +170,11 @@ var sendEMail = function (parameters) {
             document.getElementById("loader").style.display = "none";
             document.getElementById("message").innerHTML = "Email Sent Successfully!";
         }, function(error) {
-            alert(error.status);
-            if (error.status != 412) {
-                location.replace("Error.html");
-            }else {
+            if (error.status == 400){  // error for invalid email id
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("message").innerHTML = "Email sending FAILED, Please try with a valid email-id";
+            }else {
+                location.replace("Error.html");    
             }
     });
 };
