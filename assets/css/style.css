@@ -446,7 +446,7 @@ button{
     text-align: right;
 }
 .error-pic{
-    background-image: url('./assets/images/oops.png');
+    background-image: url('../images/oops.png');
     height: 300px;
     width:310px;
     background-position: center; /* Center the image */
