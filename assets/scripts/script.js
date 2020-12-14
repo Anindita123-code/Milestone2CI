@@ -136,25 +136,39 @@ function deleteFromWishList(counter) {
     }
 }
 //************************************ */
+// Function to check for valid email id
+//************************************ */
+
+function ValidateEmail(){
+    let mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(document.getElementById("email").value.match(mailformat)){
+        // *** Valid Email Address ****
+        return true;
+    }
+    else {
+        //***** You have entered an invalid email address!********
+        return false;
+    }
+}
+//************************************ */
 // Function to set the templateParams for sending email using EmailJS API
 //************************************ */
 function sendMail(){
     document.getElementById("loader").style.display = "inline-block";
     let myList = JSON.parse(localStorage.getItem("WishList"));
     (function(){
-       // emailjs.init("user_9tv1BSdrIPXy39aw6nHuB");
-       let toEmail = document.getElementById("email").value; 
-       if ( toEmail.length == 0 || toEmail == "" ){
+       if ( ValidateEmail() == false ){
             document.getElementById("loader").style.display = "none";
-            document.getElementById("message").innerHTML = "Email-Id cannot be blank, Please try with a valid email-id";
-       }else{
+            document.getElementById("message").innerHTML = "Invalid Entry for Email, Please try with a valid email-id";
+       } else{
         let templateParams = {
-            from_name: "Nordic Art Gallery Search",
-            from_email: "Arts & More",
+            from_name: "Nordic Art Gallery",
+            from_email: "aartsandmore@gmail.com",
             to_name: "Guest",
-            Galleries_wishlist: parseMyList(myList),
-            to_email: toEmail
+            galleria_wishlist: parseMyList(myList),
+            to_email: document.getElementById("email").value
         }
+
         sendEMail(templateParams);
     }
    })();
@@ -165,15 +179,16 @@ function sendMail(){
 //************************************** */
 
 var sendEMail = function (parameters) {
-   emailjs.send('gallerySearch', 'wishlist', parameters)
+   emailjs.send('gallery_search', 'template_f8atu5g', parameters)
         .then(function(response) {
             document.getElementById("loader").style.display = "none";
             document.getElementById("message").innerHTML = "Email Sent Successfully!";
         }, function(error) {
+            
             if (error.status == 400){  // error for invalid email id
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("message").innerHTML = "Email sending FAILED, Please try with a valid email-id";
-            }else {
+            }else if (error.status > 401) { // all other errors 
                 location.replace("Error.html");    
             }
     });
