@@ -165,3 +165,10 @@ function fetchSearchResults(place, index){
     let onclick_querystring = `onclick="addtoWishList('${index}','${searchCountry}','${name}', '${formatted_address}','${place.business_status}')" ><i class="fas fa-heart "></i><br></button></div>`;    
     return htmlString + onclick_querystring +"<br>";
 }
+//******************************************** */
+// Function to Clear the session variables
+//******************************************** */
+function clearSession() {
+    sessionStorage.removeItem("searchCountry");
+    sessionStorage.clear;
+}

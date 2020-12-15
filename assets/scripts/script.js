@@ -27,14 +27,6 @@ function searchByCountry(countryName){
     }
 }
 
-//******************************************** */
-// Function to Clear the session variables
-//******************************************** */
-function clearSession() {
-    sessionStorage.removeItem("searchCountry");
-    sessionStorage.clear;
-}
-
 //********************************************* */
 // Function to Get the wishlist item from localstorage and create a local array, also check for duplicate items and branch accordingly
 //********************************************* */
