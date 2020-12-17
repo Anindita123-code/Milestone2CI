@@ -2,8 +2,20 @@
 
 # Nordics Art Galleria Search
 
+## Table OF Content
+- [Milestone 2 Project](#milestone-2-project)
+- [Nordics Art Galleria Search](#nordics-art-galleria-search)
+  * [Overview :](#overview--)
+  * [UX:](#ux-)
+  * [Features](#features)
+  * [Technologies used](#technologies-used)
+  * [Testing](#testing)
+  * [Further Testing](#further-testing)
+  * [Deployment](#deployment)
+  * [Credit](#credit)
+
 ## Overview :
-The Nordic Arts Galleria Search is a search site for the Art Galleries of Nordic Countries namely
+The Nordics Art Galleria Search is a search site for the Art Galleries of Nordic Countries namely
 Åland, Denmark, Norway, Greenland, Faroe Island, Finland and Sweden. This site helps its users to filter by Country Name and display the Art gallery and Museums as a list, that are at a radius of 5000 from the marked latitude and longitudes for the respective countries.
 The users can then select from one or more results from the filtered list of Art Galleries using the corresponding heart button and add these to a wishlist. The selected items from the Home page can be viewed in the My Wishlist page and optionally can be emailed to the email address that is provided by the user.
 
