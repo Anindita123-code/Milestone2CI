@@ -148,20 +148,27 @@ function ValidateEmail(){
 function sendMail(){
     document.getElementById("loader").style.display = "inline-block";
     let myList = JSON.parse(localStorage.getItem("WishList"));
+  
     (function(){
        if ( ValidateEmail() == false ){
             document.getElementById("loader").style.display = "none";
             document.getElementById("message").innerHTML = "Invalid Entry for Email, Please try with a valid email-id";
-       } else{
-        let templateParams = {
-            from_name: "Nordic Art Gallery",
-            from_email: "aartsandmore@gmail.com",
-            to_name: "Guest",
-            galleria_wishlist: parseMyList(myList),
-            to_email: document.getElementById("email").value
-        }
+       }else{
+           if (myList != null){
+            let templateParams = {
+                from_name: "Nordic Art Gallery",
+                from_email: "aartsandmore@gmail.com",
+                to_name: "Guest",
+                galleria_wishlist: parseMyList(myList),
+                to_email: document.getElementById("email").value
+            }
 
-        sendEMail(templateParams);
+            sendEMail(templateParams);
+
+           }else{
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("message").innerHTML = "There are no items in your wishlist!! Please make appropriate selections for further actions.";
+           }
     }
    })();
 }

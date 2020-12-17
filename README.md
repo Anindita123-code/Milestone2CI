@@ -143,6 +143,17 @@ The project was deployed to GitHub Pages using the following steps...
 6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 7. Share the Published link for further evaluation.
 
+**Cloning the Project**
+Following are the steps for cloning the [this repository](https://github.com/Anindita123-code/Milestone2CI/blob/master/README.md) 
+
+1. Navigate to the repository on github using the above link.
+2. Click on "Code" button on the right hand of the screen, a dropdown will show with the Clone option.
+3. With the HTTPS selected, you need to copy the link adjacent to it.
+4. Open the terminal window on your system and using the cd command navigate to the location where the repository needs to sit.
+5. Use the 'git clone' command followed by the the url address you had copied from github.
+6. Navigate to your local repository using cd commands and using 'ls'
+7. For a deeper understanding of git-clone please refer the [link](https://github.com/git-guides/git-clone)
+
 ## Credit
 * The fonts used in this site has been taken from Google Fonts.
 * AdobeXD - Desktop version for creating Wireframes for this project [AdobeXD] (https://www.adobe.com/products/xd.html)
