@@ -184,7 +184,7 @@ var sendEMail = function (parameters) {
             document.getElementById("message").innerHTML = "Email Sent Successfully!";
         }, function(error) {
             
-            if (error.status == 400){  // error for invalid email id
+            if (error.status === 400 || error.status === 412){  // error for invalid email id
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("message").innerHTML = "Email sending FAILED, Please try with a valid email-id";
             }else if (error.status > 401) { // all other errors 
