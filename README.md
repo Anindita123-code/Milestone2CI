@@ -1,25 +1,25 @@
 # Milestone 2 Project
 
 # Nordics Art Galleria Search
+[Live Project Link](https://anindita123-code.github.io/Milestone2CI/)
 
 ## Table OF Content
-- [Milestone 2 Project](#milestone-2-project)
-- [Nordics Art Galleria Search](#nordics-art-galleria-search)
-  * [Overview :](#overview--)
-  * [UX:](#ux-)
-  * [Features](#features)
-  * [Technologies used](#technologies-used)
-  * [Testing](#testing)
-  * [Further Testing](#further-testing)
-  * [Deployment](#deployment)
-  * [Credit](#credit)
+- [Overview](#overview)
+- [User Experience](#user-experience)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Further Testing](#further-testing)
+- [Known Bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Credit](#credit)
 
-## Overview :
+## Overview 
 The Nordics Art Galleria Search is a search site for the Art Galleries of Nordic Countries namely
 Åland, Denmark, Norway, Greenland, Faroe Island, Finland and Sweden. This site helps its users to filter by Country Name and display the Art gallery and Museums as a list, that are at a radius of 5000 from the marked latitude and longitudes for the respective countries.
 The users can then select from one or more results from the filtered list of Art Galleries using the corresponding heart button and add these to a wishlist. The selected items from the Home page can be viewed in the My Wishlist page and optionally can be emailed to the email address that is provided by the user.
 
-## UX:
+## User Experience 
 This project aims to fulfil the user stories as mentioned below
 1. As a user, I should be able to understand what the site offers. 
 2. As a user, I should be able to filter by any of the specified Nordic country and display the locations of the galleries on the google map UI.
@@ -49,17 +49,30 @@ This includes wireframes for both desktop and mobile
 8. Allows the user to contact the team, and connect with the Nordics art galleria search team through any of the social links (facebook, instagram, twitter or linkedin.
 
 **Features left to be Implemented**
-None
+* None
 
-## Technologies used
-The following technologies, frameworks and libraries have been used to create this website.
-1. HTML5
-2. CSS
-3. Bootstrap framework [Bootstrap](https://getbootstrap.com)
-4. Font Awesome [FontAwesome](https://fontawesome.com/v4.7.0/icons/)
-5. Google Fonts [GoogleFonts](https://fonts.google.com/)
-7. Javascript
-8. Google Maps API.
+## Technologies Used
+**Languages Used**
+    * HTML5
+    * CSS3
+    * JavaScript
+
+**Frameworks, Libraries & Programs Used**
+[Bootstrap 4.4.1]():
+Bootstrap was used to assist with the responsiveness and styling of the website.
+[Google Fonts]():
+Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+[Font Awesome]():
+Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+[Git]()
+Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+[GitHub]():
+GitHub is used to store the projects code after being pushed from Git.
+[Adobe XD]():
+Adobe XD was used to create the wireframes during the design process.
+
+**API's**
+ 1. Google Maps API.
     The project Uses 
     * Maps JavaScript API
     * Places API
@@ -79,7 +92,8 @@ The following technologies, frameworks and libraries have been used to create th
     (Remember to restrict the API key before using it in production.)
 
     For more information on Using and Restricting API keys please refer [here](https://developers.google.com/maps/documentation/javascript/get-api-key) 
-9. EmailJs API
+
+2. EmailJs API
 
 ## Testing
 
@@ -171,29 +185,42 @@ This website has been tested manually using Google Chrome browser. The website w
 * The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 * The project has been published in peer-code-review channel on slack community of Code Institute and all the code review comments have been incorporated.
 
+## Known Bugs
+On trying to send email to an invalid email id, the EMailJS service returns a 412 (Precondition Failed) error in the Console. This has been captured in code and appropriately handled
+
 ## Deployment
 
 **GitHub Pages**
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the GitHub Repository
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
-7. Share the Published link for further evaluation.
+    STEP 1 - Log in to GitHub and locate the [GitHub Repository](https://github.com/Anindita123-code/Milestone2CI)
+    STEP 2 - At the top of the Repository (not top of page), locate the "Settings" Button on the menu.    
+    STEP 3 - Scroll down the Settings page until you locate the "GitHub Pages" Section.
+    STEP 4 - Under "Source", click the dropdown called "None" and select "Master Branch".
+    STEP 5 - The page will automatically refresh.
+    STEP 6 - Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
-**Cloning the Project**
-Following are the steps for cloning the [this repository](https://github.com/Anindita123-code/Milestone2CI/blob/master/README.md) 
+**Forking the GitHub Repository**
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
-1. Navigate to the repository on github using the above link.
-2. Click on "Code" button on the right hand of the screen, a dropdown will show with the Clone option.
-3. With the HTTPS selected, you need to copy the link adjacent to it.
-4. Open the terminal window on your system and using the cd command navigate to the location where the repository needs to sit.
-5. Use the 'git clone' command followed by the the url address you had copied from github.
-6. Navigate to your local repository using cd commands and using 'ls'
-7. For a deeper understanding of git-clone please refer the [link](https://github.com/git-guides/git-clone)
+    STEP 1 - Log in to GitHub and locate the GitHub Repository
+    STEP 2 - At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+    STEP 3 - You should now have a copy of the original repository in your GitHub account.
+
+**Making a Local Clone**
+
+    STEP 1 - Log in to GitHub and locate the GitHub Repository
+    STEP 2 - Under the repository name, click "Clone or download".
+    STEP 3 - To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+    STEP 4 - Open Git Bash
+    STEP 5 - Change the current working directory to the location where you want the cloned directory to be made.
+    STEP 6 - Type git clone, and then paste the URL you copied in Step 3.
+
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+    
+    STEP 7 - Press Enter. Your local clone will be created.
+
+    $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ## Credit
 * The fonts used in this site has been taken from Google Fonts.
