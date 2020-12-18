@@ -55,24 +55,29 @@ This includes wireframes for both desktop and mobile
 
 **Languages Used**
 
-    * [HTML5](https://en.wikipedia.org/wiki/HTML5)
-    * [CSS3](https://en.wikipedia.org/wiki/CSS)
-    * JavaScript
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* JavaScript
 
 **Frameworks, Libraries & Programs Used**
 
 [Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/):
-    * Bootstrap was used to assist with the responsiveness and styling of the website.
+* Bootstrap was used to assist with the responsiveness and styling of the website.
+
 [Google Fonts](https://fonts.google.com/):
-    * Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+* Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+
 [Font Awesome](https://fontawesome.com/):
-    * Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+* Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+
 [Git](https://git-scm.com/)
-    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+* Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
 [GitHub](https://github.com/):
-    * GitHub is used to store the projects code after being pushed from Git.
+* GitHub is used to store the projects code after being pushed from Git.
+
 [Adobe XD](https://www.adobe.com/products/xd.html):
-    * Adobe XD was used to create the wireframes during the design process.
+* Adobe XD was used to create the wireframes during the design process.
 
 **API's**
  1. [Google Maps API](https://cloud.google.com/maps-platform).
