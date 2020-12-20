@@ -116,16 +116,16 @@ function parseWishlist(wish, i){
 // Function to Delete individual item from the wishlist in myWishlist page
 //************************************** */
 function deleteFromWishList(counter) {
-    let response = confirm("This record will be deleted, do you wish to continue? ");
+    //let response = confirm("This record will be deleted, do you wish to continue? ");
     let myWishlist = JSON.parse(localStorage.getItem("WishList"));   
-    if (response){
+    //if (response){
         myWishlist.splice(counter,1);
         let divId = "div" + counter;
         localStorage.setItem ("WishList", JSON.stringify(myWishlist));
         
         let element = document.getElementById(divId);
         element.parentNode.removeChild(element);
-    }
+    //}
 }
 //************************************ */
 // Function to check for valid email id
@@ -154,22 +154,21 @@ function sendMail(){
             document.getElementById("loader").style.display = "none";
             document.getElementById("message").innerHTML = "Invalid Entry for Email, Please try with a valid email-id";
        }else{
-           if (myList != null){
-            let templateParams = {
-                from_name: "Nordic Art Gallery",
-                from_email: "aartsandmore@gmail.com",
-                to_name: "Guest",
-                galleria_wishlist: parseMyList(myList),
-                to_email: document.getElementById("email").value
-            }
-
-            sendEMail(templateParams);
-
-           }else{
+           if (myList === null ){
                 document.getElementById("loader").style.display = "none";
-                document.getElementById("message").innerHTML = "There are no items in your wishlist!! Please make appropriate selections for further actions.";
-           }
-    }
+                document.getElementById("message").innerHTML = "There are no items in your Wishlist !! ";
+                return;
+           }else if (myList.length > 0){
+                var templateParams = {
+                    from_name: "Nordic Art Gallery",
+                    from_email: "aartsandmore@gmail.com",
+                    to_name: "Guest",
+                    galleria_wishlist: parseMyList(myList),
+                    to_email: document.getElementById("email").value
+                }
+                sendEMail(templateParams);
+            }
+       }
    })();
 }
 
