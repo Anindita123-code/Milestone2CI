@@ -18,8 +18,9 @@
 <!-- end of new code-->
 <script >
 window.onload = function() {
-    if (localStorage.getItem("WishList") === null){
-        document.getElementById("message").innerHTML = "There are no items in your wishlist !!";
+ 
+    if (localStorage.getItem("WishList") === null || localStorage.getItem("WishList")=="[]"){
+        document.getElementById("message").innerHTML = "Your Wishlist Has been Cleared!!";
     }else {
         fetchfromWishList();
     }
