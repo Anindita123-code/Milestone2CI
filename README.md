@@ -237,6 +237,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 * For help on javascript, I have referred to the Javascript modules of Code Institute, [Stackoverflow](https://www.stackoverflow.com), W3C School and MDN.
 * For html and css help, I have referred to W3C School and MDN.
 * For Email Sending, I have referred to the documentation for EMailJS API
+* For Email address Validation, I have referred for Regular expressions match in Javascript code from W3C School.
 * For Google Map Search, I have referred to the documentation for Google Maps API.
 * I am thankful to my Mentor from Code Institute for guiding me through this project by sharing critical insights on occasion when I needed them the most.
     

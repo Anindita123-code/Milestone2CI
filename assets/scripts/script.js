@@ -178,6 +178,7 @@ function sendMail(){
 var sendEMail = function (parameters) {
    emailjs.send('gallery_search', 'template_f8atu5g', parameters)
         .then(function(response) {
+            alert(response.status, response.text);
             document.getElementById("loader").style.display = "none";
             document.getElementById("message").innerHTML = "Email Sent Successfully!";
         }, function(error) {
